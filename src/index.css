@@ -527,6 +527,20 @@ img { max-width: 100%; display: block; }
 .grant-list a {
   color: var(--accent);
 }
+.honor-label {
+  margin: 22px 0 0;
+  font-family: "Outfit", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+.grant-meta time {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
 
 .service-grid {
   display: grid;
