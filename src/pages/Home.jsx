@@ -63,6 +63,7 @@ export default function Home() {
         </header>
         <div className="news-list" role="tabpanel">
           {newsColumn.items.map((item) => {
+            const key = `${item.date}-${item.title.zh}`;
             const body = (
               <>
                 <time dateTime={item.date.replaceAll(".", "-")}>{item.date}</time>
@@ -74,20 +75,20 @@ export default function Home() {
             );
             if (item.href?.startsWith("/")) {
               return (
-                <Link className="news-card" to={item.href} key={item.title.en}>
+                <Link className="news-card" to={item.href} key={key}>
                   {body}
                 </Link>
               );
             }
             if (item.href) {
               return (
-                <a className="news-card" href={item.href} key={item.title.en} target="_blank" rel="noreferrer">
+                <a className="news-card" href={item.href} key={key} target="_blank" rel="noreferrer">
                   {body}
                 </a>
               );
             }
             return (
-              <article className="news-card" key={item.title.en}>
+              <article className="news-card" key={key}>
                 {body}
               </article>
             );

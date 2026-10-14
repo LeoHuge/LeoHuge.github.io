@@ -130,15 +130,27 @@ export const newsColumns = [
     title: { zh: "教学参与", en: "Teaching" },
     items: [
       {
-        date: "2025",
-        title: { zh: "第八届创新教学论文", en: "Eighth innovative teaching paper" },
-        text: { zh: "北京大学创新教学论文，一等奖。", en: "Peking University innovative teaching paper. First prize." },
+        date: "2026.10",
+        title: { zh: "AI for Community：基于社工研究生实践课程的数智化社区治理模式探索", en: "AI for Community: Exploring a Digital-Intelligent Community Governance Model Based on a Social Work Graduate Practice Course" },
+        text: { zh: "陈功、李玥、许文虎、陈昱天。中国专业学位案例中心2024年度主题案例，准予结项。", en: "Chen, Li, Xu, and Chen. 2024 theme case of the China Professional Degree Case Center. Closed." },
         href: "/teaching",
       },
       {
-        date: "2024",
-        title: { zh: "第七届创新教学论文", en: "Seventh innovative teaching paper" },
-        text: { zh: "一等奖、二等奖各一篇。", en: "One first prize and one second prize." },
+        date: "2025.11",
+        title: { zh: "AI for Community 2.0：人物画像驱动的社会工作精准化劳动教育转型", en: "AI for Community 2.0: Persona-Driven Transformation of Precision Labor Education in Social Work" },
+        text: { zh: "陈功、许文虎、张宇庭、蒋清华。北京大学第八届创新教学论文，一等奖。", en: "Chen, Xu, Zhang, and Jiang. Eighth PKU innovative teaching paper. First prize." },
+        href: "/teaching",
+      },
+      {
+        date: "2024.12",
+        title: { zh: "AI for Community：基于社工研究生实践课程的数智化社区治理模式探索", en: "AI for Community: Exploring a Digital-Intelligent Community Governance Model Based on a Social Work Graduate Practice Course" },
+        text: { zh: "陈功、许文虎、陈昱天、李玥。北京大学第七届创新教学论文，一等奖。", en: "Chen, Xu, Chen, and Li. Seventh PKU innovative teaching paper. First prize." },
+        href: "/teaching",
+      },
+      {
+        date: "2024.12",
+        title: { zh: "基于人本视角的社工实践教学方案：交互式系统在多元社会治理中的应用", en: "A Human-Centered Scheme for Social Work Practice Teaching: Interactive Systems in Plural Social Governance" },
+        text: { zh: "刘尚君、陈功、许文虎、缪姝涵。北京大学第七届创新教学论文，二等奖。", en: "Liu, Chen, Xu, and Miao. Seventh PKU innovative teaching paper. Second prize." },
         href: "/teaching",
       },
     ],
@@ -483,7 +495,7 @@ export const research = {
     en: "The survey work uses CHARLS and CFPS for health, time allocation, and coverage. Community visits check how something is actually done: who comes, where it is written down, and whether the older person can use it.",
   },
   papersTitle: { zh: "发表成果", en: "Publications" },
-  papersNote: { zh: "按索引类型排列。CSSCI 扩展、AMI 扩展计入相应类别。中文按 GB/T 7714，英文按 APA。", en: "Grouped by index. CSSCI Extended and AMI Extended are counted in the same groups. Chinese citations follow GB/T 7714; English citations follow APA." },
+  papersNote: { zh: "按索引类型排列。中文按 GB/T 7714，英文按 APA。", en: "Grouped by index. Chinese citations follow GB/T 7714; English citations follow APA." },
   citeLabel: { zh: "引用", en: "Cite" },
   groupLabel: { zh: "类型", en: "Type" },
   yearLabel: { zh: "年份", en: "Year" },
@@ -1068,30 +1080,68 @@ export const tools = [
 
 export const teachingPage = {
   kicker: { zh: "教学", en: "Teaching" },
-  title: { zh: "教学论文", en: "Teaching papers" },
+  title: { zh: "教学论文与案例", en: "Teaching papers and cases" },
   aside: {
-    zh: "这里列的是教学论文，不是正在开的课。",
-    en: "These are papers on teaching, not courses currently offered.",
+    zh: "按篇列出题目和作者。不是正在开的课。",
+    en: "Each item is a paper or a case, with authors. These are not courses currently offered.",
   },
 };
 
 export const courses = [
   {
-    term: { zh: "2025", en: "2025" },
-    level: { zh: "教学论文", en: "Teaching paper" },
-    title: { zh: "北京大学第八届创新教学论文", en: "Eighth PKU innovative teaching paper award" },
+    id: "case-zt-2410001009",
+    term: { zh: "2026.10", en: "2026.10" },
+    level: { zh: "主题案例", en: "Theme case" },
+    title: {
+      zh: "AI for Community：基于社工研究生实践课程的数智化社区治理模式探索",
+      en: "AI for Community: Exploring a Digital-Intelligent Community Governance Model Based on a Social Work Graduate Practice Course",
+    },
+    authors: { zh: "陈功、李玥、许文虎、陈昱天", en: "Gong Chen, Yue Li, Wenhu Xu, Yutian Chen" },
     text: {
-      zh: "获一等奖。",
-      en: "First prize.",
+      zh: "中国专业学位案例中心2024年度主题案例，编号 ZT-2410001009，教学型文字案例。项目《AI for Community：教育与社区养老服务的数字赋能智慧系统》，首席专家陈功。2026年10月13日准予结项，拟按程序收录入库。",
+      en: "2024 theme case of the China Professional Degree Case Center, no. ZT-2410001009. Teaching text case. Project “AI for Community: a digital empowerment system for education and community eldercare,” PI Gong Chen. Closed 13 October 2026; to be catalogued.",
     },
   },
   {
-    term: { zh: "2024", en: "2024" },
-    level: { zh: "教学论文", en: "Teaching paper" },
-    title: { zh: "北京大学第七届创新教学论文", en: "Seventh PKU innovative teaching paper award" },
+    id: "pku-teaching-8-first",
+    term: { zh: "2025.11", en: "2025.11" },
+    level: { zh: "教学论文 · 一等奖", en: "Teaching paper · First prize" },
+    title: {
+      zh: "AI for Community 2.0：人物画像驱动的社会工作精准化劳动教育转型",
+      en: "AI for Community 2.0: Persona-Driven Transformation of Precision Labor Education in Social Work",
+    },
+    authors: { zh: "陈功、许文虎、张宇庭、蒋清华", en: "Gong Chen, Wenhu Xu, Yuting Zhang, Qinghua Jiang" },
     text: {
-      zh: "一等奖、二等奖各一篇。",
-      en: "One first prize and one second prize.",
+      zh: "北京大学第八届创新教学论文评选，一等奖。",
+      en: "Eighth Peking University Innovative Teaching Paper Award, first prize.",
+    },
+  },
+  {
+    id: "pku-teaching-7-first",
+    term: { zh: "2024.12", en: "2024.12" },
+    level: { zh: "教学论文 · 一等奖", en: "Teaching paper · First prize" },
+    title: {
+      zh: "AI for Community：基于社工研究生实践课程的数智化社区治理模式探索",
+      en: "AI for Community: Exploring a Digital-Intelligent Community Governance Model Based on a Social Work Graduate Practice Course",
+    },
+    authors: { zh: "陈功、许文虎、陈昱天、李玥", en: "Gong Chen, Wenhu Xu, Yutian Chen, Yue Li" },
+    text: {
+      zh: "北京大学第七届创新教学论文评选，一等奖。",
+      en: "Seventh Peking University Innovative Teaching Paper Award, first prize.",
+    },
+  },
+  {
+    id: "pku-teaching-7-second",
+    term: { zh: "2024.12", en: "2024.12" },
+    level: { zh: "教学论文 · 二等奖", en: "Teaching paper · Second prize" },
+    title: {
+      zh: "基于人本视角的社工实践教学方案：交互式系统在多元社会治理中的应用",
+      en: "A Human-Centered Scheme for Social Work Practice Teaching: Interactive Systems in Plural Social Governance",
+    },
+    authors: { zh: "刘尚君、陈功、许文虎、缪姝涵", en: "Shangjun Liu, Gong Chen, Wenhu Xu, Shuhan Miao" },
+    text: {
+      zh: "北京大学第七届创新教学论文评选，二等奖。",
+      en: "Seventh Peking University Innovative Teaching Paper Award, second prize.",
     },
   },
 ];

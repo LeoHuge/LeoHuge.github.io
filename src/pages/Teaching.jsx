@@ -14,11 +14,12 @@ export default function Teaching() {
       />
       <div className="list-block">
         {courses.map((course) => (
-          <article className="course" key={course.title.en}>
+          <article className="course" key={course.id}>
             <time>{t(course.term)}</time>
             <div>
               <div className="level">{t(course.level)}</div>
               <h2>{t(course.title)}</h2>
+              <p className="course-authors">{t(course.authors)}</p>
               <p>{t(course.text)}</p>
             </div>
           </article>
