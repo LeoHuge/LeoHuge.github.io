@@ -55,6 +55,9 @@ export const ui = {
   newsKicker: "PAPERS · TEACHING · FIELDWORK",
   pathTitle: { zh: "学历与任职", en: "Education and posts" },
   pathKicker: { zh: "到现在为止", en: "So far" },
+  grantsTitle: { zh: "主持课题", en: "Projects led" },
+  grantsKicker: { zh: "第一负责人", en: "As PI" },
+  grantClosed: { zh: "已结题", en: "Closed" },
   serviceTitle: { zh: "学会与审稿", en: "Society and reviewing" },
   serviceKicker: { zh: "在做的事", en: "Ongoing" },
   current: { zh: "在读", en: "Now" },
@@ -350,6 +353,28 @@ export const newsColumns = [
   },
 ];
 
+export const grants = [
+  {
+    id: "cagg-2025127",
+    period: { zh: "2025", en: "2025" },
+    role: { zh: "第一负责人", en: "Principal investigator" },
+    title: {
+      zh: "AI赋能虚拟养老院的适老化重构与治理创新研究",
+      en: "Age-friendly Reconstruction and Governance Innovation of Virtual Nursing Homes Empowered by AI",
+    },
+    org: {
+      zh: "中国老年学和老年医学学会",
+      en: "China Association of Gerontology and Geriatrics",
+    },
+    no: "CAGG2025127",
+    closed: { zh: "2025年12月25日结题", en: "Closed 25 December 2025" },
+    members: {
+      zh: "课题成员：许文虎、陈功、张宇庭、徐楚风、胡安静",
+      en: "Members: Wenhu Xu, Gong Chen, Yuting Zhang, Chufeng Xu, Anjing Hu",
+    },
+  },
+];
+
 export const path = [
   {
     period: { zh: "2024.09至今", en: "2024.09–present" },
@@ -450,6 +475,8 @@ export const research = {
       },
     },
   ],
+  grantsTitle: { zh: "主持课题", en: "Projects led" },
+  grantsNote: { zh: "只列第一负责人、已核对结题的学会课题。", en: "PI-led society projects with a verified close-out." },
   methodsLabel: { zh: "数据与方法", en: "Data and methods" },
   methods: {
     zh: "调查数据主要用 CHARLS 和 CFPS，看健康、时间分配和保障覆盖。社区走访用来核对一件事实际怎么做：谁上门、记录写在哪里、老人用不用得上。",

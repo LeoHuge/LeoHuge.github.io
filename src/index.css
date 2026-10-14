@@ -444,17 +444,59 @@ img { max-width: 100%; display: block; }
 .path-card.current time { color: var(--spine-text); }
 .path-card.current p { color: var(--spine-muted); }
 
-.now-tag {
+.now-tag,
+.closed-tag {
   display: inline-block;
   margin-left: 8px;
   padding: 2px 7px;
   border-radius: 999px;
-  background: var(--accent);
-  color: white;
   font-family: "Outfit", sans-serif;
   font-size: 11px;
   letter-spacing: 0;
   vertical-align: 3px;
+}
+.now-tag {
+  background: var(--accent);
+  color: white;
+}
+.closed-tag {
+  margin-left: 0;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  vertical-align: 0;
+}
+
+.grant-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+.grant-list article {
+  padding: 18px 16px 20px;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+.grant-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.grant-list h3 {
+  margin: 8px 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.grant-list p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.grant-list a {
+  color: var(--accent);
 }
 
 .service-grid {

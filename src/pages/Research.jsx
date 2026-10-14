@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { paperTagCatalog, papers, profile, research, ui } from "../data/site.js";
+import { grants, paperTagCatalog, papers, profile, research, ui } from "../data/site.js";
 import { useI18n } from "../language.jsx";
 import PageIntro from "../components/PageIntro.jsx";
 import { Arrow } from "../components/Icons.jsx";
@@ -114,6 +114,27 @@ export default function Research() {
       <div className="methods">
         <strong>{t(research.methodsLabel)}</strong>
         <p>{t(research.methods)}</p>
+      </div>
+
+      <div className="block-head">
+        <h2>{t(research.grantsTitle)}</h2>
+        <span>{t(research.grantsNote)}</span>
+      </div>
+      <div className="grant-list">
+        {grants.map((item) => (
+          <article key={item.id}>
+            <div className="grant-meta">
+              <span className="service-role">{t(item.role)}</span>
+              <span className="closed-tag">{t(ui.grantClosed)}</span>
+            </div>
+            <h3>{t(item.title)}</h3>
+            <p>
+              {t(item.org)} · {item.no}
+            </p>
+            <p>{t(item.members)}</p>
+            <p>{t(item.closed)}</p>
+          </article>
+        ))}
       </div>
 
       <div className="block-head" id="papers">

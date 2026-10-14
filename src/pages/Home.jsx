@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { memberships, newsColumns, path, profile, service, ui } from "../data/site.js";
+import { grants, memberships, newsColumns, path, profile, service, ui } from "../data/site.js";
 import { useI18n } from "../language.jsx";
 import { Arrow } from "../components/Icons.jsx";
 
@@ -109,6 +109,29 @@ export default function Home() {
                 {item.current && <span className="now-tag">{t(ui.current)}</span>}
               </h3>
               <p>{t(item.org)}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="block" aria-labelledby="grants-title">
+        <header className="runhead">
+          <h2 id="grants-title">{t(ui.grantsTitle)}</h2>
+          <span>{t(ui.grantsKicker)}</span>
+        </header>
+        <div className="grant-list">
+          {grants.map((item) => (
+            <article key={item.id}>
+              <div className="grant-meta">
+                <span className="service-role">{t(item.role)}</span>
+                <span className="closed-tag">{t(ui.grantClosed)}</span>
+              </div>
+              <h3>{t(item.title)}</h3>
+              <p>
+                {t(item.org)} · {item.no}
+              </p>
+              <p>{t(item.members)}</p>
+              <p>{t(item.closed)}</p>
             </article>
           ))}
         </div>
