@@ -25,13 +25,15 @@ export default function Home() {
           <Link className="btn-primary" to="/research">
             {t(ui.researchCta)} <Arrow size={13} />
           </Link>
-          <a className="text-link" href={profile.scholar} target="_blank" rel="noreferrer">
-            {ui.scholar} <Arrow size={12} />
-          </a>
+          {profile.scholar && (
+            <a className="text-link" href={profile.scholar} target="_blank" rel="noreferrer">
+              {ui.scholar} <Arrow size={12} />
+            </a>
+          )}
         </div>
       </section>
 
-      <section className="theme-board" aria-label={ui.glanceLabel}>
+      <section className="theme-board" aria-label={t(ui.glanceLabel)}>
         {themes.map((item, index) => (
           <article key={item}>
             <span>0{index + 1}</span>
@@ -96,7 +98,7 @@ export default function Home() {
       <section className="block" aria-labelledby="path-title">
         <header className="runhead">
           <h2 id="path-title">{t(ui.pathTitle)}</h2>
-          <span>{ui.pathKicker}</span>
+          <span>{t(ui.pathKicker)}</span>
         </header>
         <div className="path-board">
           {path.map((item) => (
@@ -115,7 +117,7 @@ export default function Home() {
       <section className="block" aria-labelledby="service-title">
         <header className="runhead">
           <h2 id="service-title">{t(ui.serviceTitle)}</h2>
-          <span>{ui.serviceKicker}</span>
+          <span>{t(ui.serviceKicker)}</span>
         </header>
         <div className="service-grid">
           {service.map((item) => (
@@ -138,7 +140,7 @@ export default function Home() {
 
       <section className="contact-panel" id="contact">
         <div>
-          <p className="mark light">{ui.connect}</p>
+          <p className="mark light">{t(ui.connect)}</p>
           <h2>
             {ui.connectTitle[lang][0]}
             <br />
@@ -146,9 +148,15 @@ export default function Home() {
           </h2>
           <p>{t(ui.connectLede)}</p>
         </div>
-        <a className="mail-link" href={`mailto:${profile.email}`}>
-          {profile.email} <Arrow />
-        </a>
+        <div className="contact-aside">
+          <figure className="qr-card">
+            <img src="/homepage-qr.png" alt={t(ui.qrNote)} width="148" height="148" />
+            <figcaption>{t(ui.qrNote)}</figcaption>
+          </figure>
+          <a className="mail-link" href={`mailto:${profile.email}`}>
+            {profile.email} <Arrow />
+          </a>
+        </div>
       </section>
     </div>
   );

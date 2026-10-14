@@ -60,7 +60,7 @@ export default function Layout() {
             <MenuIcon open />
           </button>
         </div>
-        <img className="spine-photo" src={profile.portrait} alt="" />
+        <img className="spine-photo" src={profile.portrait} alt={t(profile.name)} />
         <p className="spine-name">
           {lang === "zh" ? (
             <>
@@ -88,12 +88,16 @@ export default function Layout() {
             <a href={`mailto:${profile.email}`} aria-label="Email">
               <Mail />
             </a>
-            <a href={profile.orcid} target="_blank" rel="noreferrer" aria-label="ORCID">
-              <Orcid />
-            </a>
-            <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-              <GitHub />
-            </a>
+            {profile.orcid && (
+              <a href={profile.orcid} target="_blank" rel="noreferrer" aria-label="ORCID">
+                <Orcid />
+              </a>
+            )}
+            {profile.github && (
+              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+                <GitHub />
+              </a>
+            )}
           </div>
         </div>
       </aside>
