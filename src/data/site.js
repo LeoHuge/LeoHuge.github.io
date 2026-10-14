@@ -132,7 +132,7 @@ export const newsColumns = [
       {
         date: "2026.10",
         title: { zh: "AI for Community：基于社工研究生实践课程的数智化社区治理模式探索", en: "AI for Community: Exploring a Digital-Intelligent Community Governance Model Based on a Social Work Graduate Practice Course" },
-        text: { zh: "陈功、李玥、许文虎、陈昱天。中国专业学位案例中心2024年度主题案例，准予结项。", en: "Chen, Li, Xu, and Chen. 2024 theme case of the China Professional Degree Case Center. Closed." },
+        text: { zh: "陈功、李玥、许文虎、陈昱天。中国专业学位案例中心2024年度主题案例，已结项。", en: "Chen, Li, Xu, and Chen. 2024 theme case of the China Professional Degree Case Center. Closed." },
         href: "/teaching",
       },
       {
@@ -488,7 +488,7 @@ export const research = {
     },
   ],
   grantsTitle: { zh: "主持课题", en: "Projects led" },
-  grantsNote: { zh: "只列第一负责人、已核对结题的学会课题。", en: "PI-led society projects with a verified close-out." },
+  grantsNote: { zh: "第一负责人主持的学会课题。", en: "Society projects led as principal investigator." },
   methodsLabel: { zh: "数据与方法", en: "Data and methods" },
   methods: {
     zh: "调查数据主要用 CHARLS 和 CFPS，看健康、时间分配和保障覆盖。社区走访用来核对一件事实际怎么做：谁上门、记录写在哪里、老人用不用得上。",
@@ -499,7 +499,7 @@ export const research = {
   citeLabel: { zh: "引用", en: "Cite" },
   groupLabel: { zh: "类型", en: "Type" },
   yearLabel: { zh: "年份", en: "Year" },
-  emptyGroup: { zh: "这一类目前还没有已核对的篇目。", en: "No verified item in this group yet." },
+  emptyGroup: { zh: "这一类暂无。", en: "None in this group." },
   publicationGroups: [
     {
       id: "wos",
@@ -531,8 +531,8 @@ export const research = {
     zh: "其他会议",
     en: "Other conference papers",
     note: {
-      zh: "IJCAI 工作坊录用。未计入 EI。",
-      en: "Accepted at an IJCAI workshop. Not counted as EI.",
+      zh: "IJCAI 工作坊论文。",
+      en: "An IJCAI workshop paper.",
     },
   },
 };
@@ -1082,8 +1082,8 @@ export const teachingPage = {
   kicker: { zh: "教学", en: "Teaching" },
   title: { zh: "教学论文与案例", en: "Teaching papers and cases" },
   aside: {
-    zh: "按篇列出题目和作者。不是正在开的课。",
-    en: "Each item is a paper or a case, with authors. These are not courses currently offered.",
+    zh: "参与撰写的教学论文，以及已结项的主题案例。",
+    en: "Teaching papers written with colleagues, and a completed theme case.",
   },
 };
 
@@ -1098,8 +1098,8 @@ export const courses = [
     },
     authors: { zh: "陈功、李玥、许文虎、陈昱天", en: "Gong Chen, Yue Li, Wenhu Xu, Yutian Chen" },
     text: {
-      zh: "中国专业学位案例中心2024年度主题案例，编号 ZT-2410001009，教学型文字案例。项目《AI for Community：教育与社区养老服务的数字赋能智慧系统》，首席专家陈功。2026年10月13日准予结项，拟按程序收录入库。",
-      en: "2024 theme case of the China Professional Degree Case Center, no. ZT-2410001009. Teaching text case. Project “AI for Community: a digital empowerment system for education and community eldercare,” PI Gong Chen. Closed 13 October 2026; to be catalogued.",
+      zh: "中国专业学位案例中心2024年度主题案例，编号 ZT-2410001009。出自项目《AI for Community：教育与社区养老服务的数字赋能智慧系统》，首席专家陈功。2026年10月13日结项。",
+      en: "2024 theme case of the China Professional Degree Case Center, no. ZT-2410001009. From the project “AI for Community: a digital empowerment system for education and community eldercare,” PI Gong Chen. Closed 13 October 2026.",
     },
   },
   {
