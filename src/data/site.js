@@ -19,20 +19,20 @@ export const profile = {
   vertical: "CHILDHOOD · MUTUAL AID · TIERED CARE · RURAL ECONOMY",
   concern: { zh: "博士研究生 · 人口学", en: "PhD student · Demography" },
   headline: {
-    zh: ["健康、照护", "和老龄社会。"],
-    en: ["Health, care,", "and an aging society."],
+    zh: ["老龄健康", "与社会政策"],
+    en: ["Later-life health", "and social policy"],
   },
   lede: {
-    zh: "谁来看一眼，待多久，看病之后家里还要出多少钱，这些都是很具体的事。有的要从童年往回看，有的要走进村里才清楚。",
-    en: "Who comes to look in, how long they stay, what a family still pays after seeing a doctor: these are ordinary facts. Some of it has to be traced back to childhood. Some of it only becomes clear in the village.",
+    zh: "研究兴趣集中在老龄健康、照护安排与相关社会政策。主要使用 CHARLS、CFPS 等调查数据，并结合社区调研。",
+    en: "My research focuses on later-life health, care arrangements, and related social policy. It draws mainly on CHARLS and CFPS, together with community fieldwork.",
   },
   glance: {
     zh: ["童年逆境与老龄健康", "互助养老与时间利用", "分级诊疗与经济负担", "人口政策与农村经济"],
     en: ["Childhood adversity and later-life health", "Mutual aid and time use", "Hierarchical medical care and economic burden", "Population policy and the rural economy"],
   },
   glanceNote: {
-    zh: "分开写是四条。到了同一个人身上，经常分不开。",
-    en: "On the page they are four lines. On one person they are often hard to separate.",
+    zh: "目前主要有四个研究方向。",
+    en: "Current work is organized around four research areas.",
   },
   footerNote: { zh: "北京大学人口研究所", en: "Institute of Population Research, Peking University" },
 };
@@ -48,33 +48,33 @@ export const ui = {
   contact: { zh: "联系我", en: "Contact" },
   skip: { zh: "跳转到正文", en: "Skip to content" },
   website: "ACADEMIC WEBSITE",
-  researchCta: { zh: "看研究", en: "See the research" },
+  researchCta: { zh: "研究工作", en: "Research" },
   scholar: "Google Scholar",
   glanceLabel: { zh: "研究方向", en: "Research" },
-  newsTitle: { zh: "近期动态", en: "Recent notes" },
+  newsTitle: { zh: "近期动态", en: "Updates" },
   newsKicker: "PAPERS · TEACHING · FIELDWORK",
   pathTitle: { zh: "学历与任职", en: "Education and posts" },
-  pathKicker: { zh: "到现在为止", en: "So far" },
+  pathKicker: { zh: "履历", en: "Appointments" },
   grantsTitle: { zh: "主持课题", en: "Projects led" },
   grantsKicker: { zh: "第一负责人", en: "As PI" },
   grantClosed: { zh: "已结题", en: "Closed" },
   serviceTitle: { zh: "学会与审稿", en: "Society and reviewing" },
-  serviceKicker: { zh: "在做的事", en: "Ongoing" },
+  serviceKicker: { zh: "目前", en: "Current" },
   current: { zh: "在读", en: "Now" },
-  connect: { zh: "来信", en: "Write" },
+  connect: { zh: "联系", en: "Contact" },
   connectTitle: {
-    zh: ["有事可以写信。", "调研、论文或者课上的事都行。"],
-    en: ["You can write.", "About fieldwork, a paper, or class."],
+    zh: ["欢迎来信。", "研究、论文或教学均可。"],
+    en: ["Please write.", "Research, papers, or teaching are welcome."],
   },
   connectLede: {
-    zh: "从邮箱开始就行。",
-    en: "Email is enough.",
+    zh: "来信请使用以下邮箱。",
+    en: "Please use the address below.",
   },
-  qrNote: { zh: "微信扫一扫打开", en: "Scan to open" },
-  readPapers: { zh: "看论文", en: "See the papers" },
+  qrNote: { zh: "微信扫一扫打开主页", en: "Scan to open the homepage" },
+  readPapers: { zh: "发表成果", en: "Publications" },
   allYears: { zh: "全部", en: "All" },
   back: { zh: "返回", en: "Back" },
-  notFound: { zh: "这一页不存在。", en: "This page is not here." },
+  notFound: { zh: "页面不存在。", en: "Page not found." },
   pages: {
     home: { zh: "主页", en: "Home" },
     research: { zh: "研究", en: "Research" },
@@ -439,24 +439,24 @@ export const memberships = [
 export const research = {
   kicker: { zh: "研究", en: "Research" },
   title: {
-    zh: "老龄社会里的照护、健康与政策",
-    en: "Care, health, and policy in an aging society",
+    zh: "老龄健康、照护与社会政策",
+    en: "Later-life health, care, and social policy",
   },
   angle: { zh: "四个方向", en: "Four directions" },
   aside: {
-    zh: "四条可以分开做。到了一个村子里，它们经常是同一天里的事。",
-    en: "Each of the four can stand alone. In a village they often belong to the same day.",
+    zh: "调查数据与社区调研相结合。",
+    en: "Survey data combined with community fieldwork.",
   },
-  tracksTitle: { zh: "四个研究方向", en: "Four lines of research" },
-  tracksNote: { zh: "调查与走访", en: "Surveys and visits" },
+  tracksTitle: { zh: "四个研究方向", en: "Four research areas" },
+  tracksNote: { zh: "数据与调研", en: "Data and fieldwork" },
   tracks: [
     {
       index: "01",
       stage: { zh: "童年逆境", en: "Childhood" },
       title: { zh: "童年逆境与老龄健康", en: "Childhood adversity and later-life health" },
       text: {
-        zh: "小时候吃过的苦，当时不一定看得出来。到了中老年，它会不会还留在病、睡眠和死亡风险里。",
-        en: "Hardship in childhood does not always show then. Later it may still be there in illness, sleep, and the chance of dying earlier.",
+        zh: "研究童年期不利经历与中老年健康结局的关系，包括疾病、睡眠与死亡风险。",
+        en: "Examines how childhood adversity is related to later-life health outcomes, including illness, sleep, and mortality risk.",
       },
     },
     {
@@ -464,8 +464,8 @@ export const research = {
       stage: { zh: "互助与时间", en: "Mutual aid" },
       title: { zh: "互助养老与时间利用", en: "Mutual aid and time use" },
       text: {
-        zh: "邻里来看一眼，社区排人值班，或者上门帮忙，时间银行也算。这些都要占掉一天里的小时，问题是落在谁身上。",
-        en: "A neighbor looking in, someone on community duty, a visit to the door, and time banks as well. Each takes hours out of a day. The question is whose day it is.",
+        zh: "研究互助养老、时间银行和社区照护中的时间利用。",
+        en: "Studies time use in mutual-aid eldercare, time banks, and community care.",
       },
     },
     {
@@ -473,8 +473,8 @@ export const research = {
       stage: { zh: "分级诊疗", en: "Hierarchical care" },
       title: { zh: "分级诊疗与经济负担", en: "Hierarchical medical care and economic burden" },
       text: {
-        zh: "病人被分到不同层级的医院，钱和时间不一定跟着走。分级之后，负担常常还在原来的家里。",
-        en: "Patients are sent across levels of the hierarchical medical system. Money and time do not always follow, and the bill often stays with the same household.",
+        zh: "研究分级诊疗背景下中老年人的就医行为与医疗负担。",
+        en: "Studies health-seeking and medical burden among middle-aged and older adults under hierarchical diagnosis and treatment.",
       },
     },
     {
@@ -482,8 +482,8 @@ export const research = {
       stage: { zh: "农村经济", en: "Rural economy" },
       title: { zh: "人口政策与农村经济", en: "Population policy and the rural economy" },
       text: {
-        zh: "人口政策写在文件里。到了村里，要看人还在不在，地和营生还撑不撑得住。",
-        en: "A population policy is written on paper. In the countryside it has to be read against whether people are still there, and whether the land and the livelihood still hold.",
+        zh: "研究人口政策、农村发展及银发经济等相关问题。",
+        en: "Studies population policy, rural development, and related issues such as the silver economy.",
       },
     },
   ],
@@ -491,8 +491,8 @@ export const research = {
   grantsNote: { zh: "第一负责人主持的学会课题。", en: "Society projects led as principal investigator." },
   methodsLabel: { zh: "数据与方法", en: "Data and methods" },
   methods: {
-    zh: "调查数据主要用 CHARLS 和 CFPS，看健康、时间分配和保障覆盖。社区走访用来核对一件事实际怎么做：谁上门、记录写在哪里、老人用不用得上。",
-    en: "The survey work uses CHARLS and CFPS for health, time allocation, and coverage. Community visits check how something is actually done: who comes, where it is written down, and whether the older person can use it.",
+    zh: "调查数据主要使用 CHARLS 和 CFPS，分析健康、时间分配与保障覆盖；社区走访用于补充调查数据不易观察的实施过程。",
+    en: "Survey analyses mainly use CHARLS and CFPS for health, time allocation, and coverage. Community visits supplement what survey data cannot easily show about how programs are carried out.",
   },
   papersTitle: { zh: "发表成果", en: "Publications" },
   papersNote: { zh: "按索引类型排列。中文按 GB/T 7714，英文按 APA。", en: "Grouped by index. Chinese citations follow GB/T 7714; English citations follow APA." },
@@ -1018,10 +1018,10 @@ export const papers = [
 
 export const toolsPage = {
   kicker: { zh: "工具", en: "Tools" },
-  title: { zh: "研究里用到的小工具", en: "Small tools used in the work" },
+  title: { zh: "研究工具", en: "Research tools" },
   aside: {
-    zh: "做研究时用得上的小东西：记录表、阅读清单，或者课上会用到的页面。",
-    en: "Small things used in the work: a field sheet, a reading list, or a page for class.",
+    zh: "调研记录表与课程阅读清单。",
+    en: "A fieldwork log and a course reading list.",
   },
 };
 
@@ -1033,8 +1033,8 @@ export const tools = [
     version: { zh: "访谈记录", en: "Interview notes" },
     stack: "Spreadsheet · Markdown",
     summary: {
-      zh: "把访谈日期、地点、原话和自己的推测分开。当晚整理时，不把印象补写成事实。",
-      en: "Keeps the date, place, quoted speech, and later guesses apart, so the evening write-up does not turn impressions into facts.",
+      zh: "用于记录访谈日期、地点、原话与后续推断，便于当晚整理。",
+      en: "Records interview date, place, quoted speech, and later inferences for same-day write-up.",
     },
     links: [],
     features: [
@@ -1150,8 +1150,8 @@ export const blogPage = {
   kicker: { zh: "博客", en: "Blog" },
   title: { zh: "笔记与短文", en: "Notes and short essays" },
   aside: {
-    zh: "读书笔记、方法备忘，还有田野里暂时写不进论文的话。不定期更新。",
-    en: "Reading notes, method memos, and field observations that do not belong in a paper yet.",
+    zh: "读书笔记与调研备忘，不定期更新。",
+    en: "Reading notes and fieldwork memos, updated from time to time.",
   },
 };
 
