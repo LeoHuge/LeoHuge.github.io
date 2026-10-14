@@ -334,11 +334,40 @@ img { max-width: 100%; display: block; }
   color: var(--ink);
 }
 
-.theme-note {
-  margin: 12px 2px 0;
-  color: var(--muted);
-  font-size: 13px;
+.skill-list {
+  display: grid;
+  gap: 8px;
+  max-width: 42em;
+  margin: 22px 2px 0;
 }
+
+.skill-list > div {
+  display: grid;
+  grid-template-columns: 5.5em minmax(0, 1fr);
+  gap: 14px;
+  align-items: baseline;
+}
+
+.skill-list dt {
+  margin: 0;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.skill-list dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.methods .skill-list {
+  margin: 0;
+  max-width: none;
+}
+
+.methods .skill-list dt { color: var(--ink); }
 
 .block { margin-top: 56px; }
 
@@ -987,6 +1016,7 @@ img { max-width: 100%; display: block; }
   .opening { padding-top: 36px; }
   .opening h1 { font-size: 40px; }
   .page { padding-top: 32px; }
+  .skill-list > div { grid-template-columns: 1fr; gap: 4px; }
 
   .track,
   .methods,

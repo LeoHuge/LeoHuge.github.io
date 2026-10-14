@@ -23,17 +23,36 @@ export const profile = {
     en: ["Later-life health", "and social policy"],
   },
   lede: {
-    zh: "研究兴趣集中在老龄健康、照护安排与相关社会政策。主要使用 CHARLS、CFPS 等调查数据，并结合社区调研。",
-    en: "My research focuses on later-life health, care arrangements, and related social policy. It draws mainly on CHARLS and CFPS, together with community fieldwork.",
+    zh: "研究领域为老龄健康、卫生经济、互助养老与农村人口。",
+    en: "Research fields: later-life health, health economics, mutual-aid eldercare, and rural population studies.",
   },
   glance: {
     zh: ["童年逆境与老龄健康", "互助养老与时间利用", "分级诊疗与经济负担", "人口政策与农村经济"],
     en: ["Childhood adversity and later-life health", "Mutual aid and time use", "Hierarchical medical care and economic burden", "Population policy and the rural economy"],
   },
-  glanceNote: {
-    zh: "目前主要有四个研究方向。",
-    en: "Current work is organized around four research areas.",
-  },
+  skills: [
+    {
+      label: { zh: "数据库", en: "Surveys" },
+      text: {
+        zh: "熟悉 CHARLS、CFPS；了解 CLHLS、CHFS、GBD。",
+        en: "Familiar with CHARLS and CFPS; acquainted with CLHLS, CHFS, and GBD.",
+      },
+    },
+    {
+      label: { zh: "研究方法", en: "Methods" },
+      text: {
+        zh: "调查微数据分析，结合问卷、访谈、平板面访与录音编码。",
+        en: "Survey microdata analysis, with questionnaires, interviews, tablet-based interviews, and audio coding.",
+      },
+    },
+    {
+      label: { zh: "分析软件", en: "Software" },
+      text: {
+        zh: "Stata、SPSS。",
+        en: "Stata and SPSS.",
+      },
+    },
+  ],
   footerNote: { zh: "北京大学人口研究所", en: "Institute of Population Research, Peking University" },
 };
 
@@ -444,8 +463,8 @@ export const research = {
   },
   angle: { zh: "四个方向", en: "Four directions" },
   aside: {
-    zh: "调查数据与社区调研相结合。",
-    en: "Survey data combined with community fieldwork.",
+    zh: "调查微数据、问卷访谈与统计分析。",
+    en: "Survey microdata, field interviews, and statistical analysis.",
   },
   tracksTitle: { zh: "四个研究方向", en: "Four research areas" },
   tracksNote: { zh: "数据与调研", en: "Data and fieldwork" },
@@ -490,10 +509,6 @@ export const research = {
   grantsTitle: { zh: "主持课题", en: "Projects led" },
   grantsNote: { zh: "第一负责人主持的学会课题。", en: "Society projects led as principal investigator." },
   methodsLabel: { zh: "数据与方法", en: "Data and methods" },
-  methods: {
-    zh: "调查数据主要使用 CHARLS 和 CFPS，分析健康、时间分配与保障覆盖；社区走访用于补充调查数据不易观察的实施过程。",
-    en: "Survey analyses mainly use CHARLS and CFPS for health, time allocation, and coverage. Community visits supplement what survey data cannot easily show about how programs are carried out.",
-  },
   papersTitle: { zh: "发表成果", en: "Publications" },
   papersNote: { zh: "按索引类型排列。中文按 GB/T 7714，英文按 APA。", en: "Grouped by index. Chinese citations follow GB/T 7714; English citations follow APA." },
   citeLabel: { zh: "引用", en: "Cite" },

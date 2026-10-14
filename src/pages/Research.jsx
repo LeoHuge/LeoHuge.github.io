@@ -113,7 +113,14 @@ export default function Research() {
 
       <div className="methods">
         <strong>{t(research.methodsLabel)}</strong>
-        <p>{t(research.methods)}</p>
+        <dl className="skill-list">
+          {profile.skills.map((item) => (
+            <div key={item.label.en}>
+              <dt>{t(item.label)}</dt>
+              <dd>{t(item.text)}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
 
       <div className="block-head">

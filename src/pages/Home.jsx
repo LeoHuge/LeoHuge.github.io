@@ -41,7 +41,14 @@ export default function Home() {
           </article>
         ))}
       </section>
-      <p className="theme-note">{t(profile.glanceNote)}</p>
+      <dl className="skill-list">
+        {profile.skills.map((item) => (
+          <div key={item.label.en}>
+            <dt>{t(item.label)}</dt>
+            <dd>{t(item.text)}</dd>
+          </div>
+        ))}
+      </dl>
 
       <section className="block" aria-labelledby="news-title">
         <header className="runhead news-head">
