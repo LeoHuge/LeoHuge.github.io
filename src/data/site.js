@@ -77,8 +77,10 @@ export const ui = {
   grantsTitle: { zh: "主持课题", en: "Projects led" },
   grantsKicker: { zh: "第一负责人", en: "As PI" },
   honorsTitle: { zh: "荣誉奖励", en: "Honors and awards" },
-  honorsKicker: { zh: "在北京大学", en: "At Peking University" },
+  honorsKicker: { zh: "北京大学期间", en: "While at Peking University" },
   researchHonors: { zh: "科研获奖", en: "Research awards" },
+  teachingHonors: { zh: "教学获奖", en: "Teaching awards" },
+  practiceHonors: { zh: "实践获奖", en: "Field awards" },
   personalHonors: { zh: "个人荣誉", en: "Personal honors" },
   grantClosed: { zh: "已结题", en: "Closed" },
   serviceTitle: { zh: "学会与审稿", en: "Society and reviewing" },
@@ -414,93 +416,54 @@ export const honors = {
   research: [
     {
       year: "2025",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "竞赛", en: "Contest" },
       grade: { zh: "特等奖 · 擂主", en: "Special prize · lead team" },
       title: {
-        zh: "「青砺基层」社会治理专项赛",
-        en: "Qingli Grassroots social-governance contest",
+        zh: "「青创北京」「挑战杯」青砺基层社会治理专项赛",
+        en: "Capital Challenge Cup, Qingli Grassroots social-governance contest",
       },
       note: {
-        zh: "「青创北京」2025年「挑战杯」首都大学生课外学术科技作品竞赛。专项赛特等奖，并获擂主。",
-        en: "Capital Challenge Cup, Qingchuang Beijing 2025. Special prize in the thematic contest, and named lead team.",
+        zh: "首都大学生课外学术科技作品竞赛。专项赛特等奖，并获擂主。",
+        en: "Capital-level Challenge Cup, Qingchuang Beijing 2025. Special prize and named lead team.",
       },
     },
     {
       year: "2025",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "竞赛", en: "Contest" },
       grade: { zh: "一等奖", en: "First prize" },
       title: {
-        zh: "跨学科学生课外学术科技作品竞赛",
-        en: "Interdisciplinary student research competition",
+        zh: "北京大学第三十四届「挑战杯」跨学科竞赛",
+        en: "34th PKU Challenge Cup, interdisciplinary contest",
       },
       note: {
-        zh: "北京大学第三十四届「挑战杯」系列赛事。",
-        en: "34th Peking University Challenge Cup.",
+        zh: "跨学科学生课外学术科技作品竞赛，校级一等奖。",
+        en: "Interdisciplinary student research contest, university first prize.",
       },
     },
     {
       year: "2025",
-      kind: { zh: "教学", en: "Teaching" },
-      grade: { zh: "一等奖", en: "First prize" },
-      title: {
-        zh: "第八届创新教学论文",
-        en: "Eighth innovative teaching paper award",
-      },
-      note: {
-        zh: "《AI for Community 2.0：人物画像驱动的社会工作精准化劳动教育转型》。陈功、许文虎、张宇庭、蒋清华。",
-        en: "AI for Community 2.0. Chen, Xu, Zhang, and Jiang.",
-      },
-    },
-    {
-      year: "2025",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "竞赛", en: "Contest" },
       grade: { zh: "三等奖", en: "Third prize" },
       title: {
-        zh: "首都「挑战杯」主体赛",
+        zh: "「青创北京」「挑战杯」主体赛",
         en: "Capital Challenge Cup, main contest",
       },
       note: {
-        zh: "「青创北京」2025年「挑战杯」首都大学生课外学术科技作品竞赛主体赛。",
+        zh: "首都大学生课外学术科技作品竞赛主体赛。",
         en: "Main contest of the 2025 Capital Challenge Cup.",
       },
     },
     {
       year: "2025",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "竞赛", en: "Contest" },
       grade: { zh: "三等奖", en: "Third prize" },
       title: {
-        zh: "五四青年科学奖竞赛",
-        en: "May Fourth youth science award",
+        zh: "北京大学第三十四届「挑战杯」五四青年科学奖竞赛",
+        en: "34th PKU Challenge Cup, May Fourth youth science award",
       },
       note: {
-        zh: "北京大学第三十四届「挑战杯」系列赛事。",
-        en: "34th Peking University Challenge Cup.",
-      },
-    },
-    {
-      year: "2024",
-      kind: { zh: "教学", en: "Teaching" },
-      grade: { zh: "一等奖", en: "First prize" },
-      title: {
-        zh: "第七届创新教学论文",
-        en: "Seventh innovative teaching paper award",
-      },
-      note: {
-        zh: "《AI for Community：基于社工研究生实践课程的数智化社区治理模式探索》。陈功、许文虎、陈昱天、李玥。",
-        en: "AI for Community. Chen, Xu, Chen, and Li.",
-      },
-    },
-    {
-      year: "2024",
-      kind: { zh: "教学", en: "Teaching" },
-      grade: { zh: "二等奖", en: "Second prize" },
-      title: {
-        zh: "第七届创新教学论文",
-        en: "Seventh innovative teaching paper award",
-      },
-      note: {
-        zh: "《基于人本视角的社工实践教学方案：交互式系统在多元社会治理中的应用》。刘尚君、陈功、许文虎、缪姝涵。",
-        en: "A human-centered scheme for social work practice teaching. Liu, Chen, Xu, and Miao.",
+        zh: "校级竞赛三等奖。",
+        en: "University-level third prize.",
       },
     },
     {
@@ -508,82 +471,82 @@ export const honors = {
       kind: { zh: "调研", en: "Field report" },
       grade: { zh: "二等奖", en: "Second prize" },
       title: {
-        zh: "励志计划全国成果汇报优秀调研报告",
-        en: "Lizhi Plan national report prize",
+        zh: "中国平安励志计划全国成果汇报优秀调研报告",
+        en: "Ping An Lizhi Plan national field-report prize",
       },
       note: {
-        zh: "中国平安励志计划。优秀报告奖。",
-        en: "Ping An Lizhi Plan. Excellent-report prize.",
+        zh: "全国成果汇报，优秀报告奖。",
+        en: "National report meeting; excellence prize.",
       },
     },
     {
       year: "2023",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "论文", en: "Paper" },
       grade: { zh: "三等奖", en: "Third prize" },
       title: {
-        zh: "绿色智慧城市设计大赛论文赛道",
-        en: "Green smart-city design contest, paper track",
+        zh: "「军山新城杯」绿色智慧城市设计大赛论文赛道",
+        en: "Junshan New Town Cup, paper track",
       },
       note: {
-        zh: "「军山新城杯」首届国际大学生绿色智慧城市设计大赛，论文赛道。",
-        en: "First Junshan New Town Cup international student contest, paper track.",
+        zh: "首届国际大学生绿色智慧城市设计大赛。",
+        en: "First international student contest on green smart cities.",
       },
     },
     {
       year: "2022",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "竞赛", en: "Contest" },
       grade: { zh: "一等奖 1 项 · 三等奖 3 项", en: "One first prize · three third prizes" },
       title: {
-        zh: "第三十届「挑战杯」系列赛事",
-        en: "30th Challenge Cup series",
+        zh: "北京大学第三十届「挑战杯」系列赛事",
+        en: "30th PKU Challenge Cup series",
       },
       note: {
-        zh: "北京大学第三十届「挑战杯」系列赛事。",
-        en: "30th Peking University Challenge Cup series.",
+        zh: "校级系列赛事。",
+        en: "University Challenge Cup series.",
       },
     },
     {
       year: "2022",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "论文", en: "Paper" },
       grade: { zh: "二等奖", en: "Second prize" },
       title: {
-        zh: "中国健康经济发展论坛优秀论文",
-        en: "Outstanding paper, China Health Economy Forum",
+        zh: "第五届中国健康经济发展论坛优秀论文",
+        en: "Outstanding paper, Fifth China Health Economy Forum",
       },
       note: {
-        zh: "第五届中国健康经济发展论坛。",
-        en: "Fifth China Forum on Health Economy Development.",
+        zh: "论坛优秀论文奖。",
+        en: "Outstanding-paper prize of the forum.",
       },
     },
     {
       year: "2022",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "论文", en: "Paper" },
       grade: { zh: "优秀作品奖", en: "Outstanding work" },
       title: {
         zh: "中国老龄志愿与公益服务高峰论坛",
-        en: "China summit on volunteer and public-interest services for older people",
+        en: "China summit on volunteer services for older people",
       },
       note: {
-        zh: "论坛优秀作品奖。",
+        zh: "高峰论坛优秀作品奖。",
         en: "Outstanding-work prize of the summit.",
       },
     },
     {
       year: "2022",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "论文", en: "Paper" },
       grade: { zh: "三等奖", en: "Third prize" },
       title: {
-        zh: "新年学术论坛暨时间银行研讨会",
+        zh: "志愿与公益分会新年学术论坛暨时间银行研讨会",
         en: "New Year forum and time-bank seminar",
       },
       note: {
-        zh: "中国老年学和老年医学学会志愿与公益分会，2022年。",
-        en: "Volunteerism and Public Welfare Branch, China Association of Gerontology and Geriatrics, 2022.",
+        zh: "中国老年学和老年医学学会。",
+        en: "China Association of Gerontology and Geriatrics.",
       },
     },
     {
       year: "2022",
-      kind: { zh: "科研", en: "Research" },
+      kind: { zh: "论文", en: "Paper" },
       grade: { zh: "三等奖", en: "Third prize" },
       title: {
         zh: "粤港澳大湾区酒店及旅游业研究生研究论坛",
@@ -595,41 +558,106 @@ export const honors = {
       },
     },
   ],
+  teaching: [
+    {
+      year: "2025",
+      kind: { zh: "教学", en: "Teaching" },
+      grade: { zh: "一等奖", en: "First prize" },
+      title: {
+        zh: "北京大学第八届创新教学论文",
+        en: "Eighth PKU innovative teaching paper award",
+      },
+      note: {
+        zh: "《AI for Community 2.0》。陈功、许文虎、张宇庭、蒋清华。",
+        en: "AI for Community 2.0. Chen, Xu, Zhang, and Jiang.",
+      },
+      href: "/teaching",
+    },
+    {
+      year: "2024",
+      kind: { zh: "教学", en: "Teaching" },
+      grade: { zh: "一等奖", en: "First prize" },
+      title: {
+        zh: "北京大学第七届创新教学论文",
+        en: "Seventh PKU innovative teaching paper award",
+      },
+      note: {
+        zh: "《AI for Community》。陈功、许文虎、陈昱天、李玥。",
+        en: "AI for Community. Chen, Xu, Chen, and Li.",
+      },
+      href: "/teaching",
+    },
+    {
+      year: "2024",
+      kind: { zh: "教学", en: "Teaching" },
+      grade: { zh: "二等奖", en: "Second prize" },
+      title: {
+        zh: "北京大学第七届创新教学论文",
+        en: "Seventh PKU innovative teaching paper award",
+      },
+      note: {
+        zh: "《基于人本视角的社工实践教学方案》。刘尚君、陈功、许文虎、缪姝涵。",
+        en: "A human-centered scheme for social work practice teaching. Liu, Chen, Xu, and Miao.",
+      },
+      href: "/teaching",
+    },
+  ],
+  practice: [
+    {
+      year: "2025",
+      kind: { zh: "实践", en: "Practice" },
+      grade: { zh: "银奖", en: "Silver" },
+      title: {
+        zh: "北京大学寒假社会实践",
+        en: "PKU winter social practice",
+      },
+      note: {
+        zh: "校级社会实践银奖。",
+        en: "University silver award.",
+      },
+    },
+    {
+      year: "2024",
+      kind: { zh: "实践", en: "Practice" },
+      grade: { zh: "银奖", en: "Silver" },
+      title: {
+        zh: "北京大学暑期社会实践",
+        en: "PKU summer social practice",
+      },
+      note: {
+        zh: "校级社会实践银奖。",
+        en: "University silver award.",
+      },
+    },
+  ],
   personal: [
     {
       year: "2026",
       kind: { zh: "奖学金", en: "Scholarship" },
       grade: { zh: "学业", en: "Academic" },
       title: { zh: "北京大学校长奖学金", en: "Peking University President’s Scholarship" },
-      note: { zh: "学业类。", en: "Awarded for academic work." },
+      note: { zh: "学业类。", en: "Academic track." },
     },
     {
       year: "2025",
       kind: { zh: "奖学金", en: "Scholarship" },
-      grade: { zh: "学业", en: "Academic" },
+      grade: { zh: "国家级", en: "National" },
       title: { zh: "国家奖学金", en: "National Scholarship" },
-      note: { zh: "在北京大学获得，学业类。", en: "Received at Peking University, for academic work." },
+      note: { zh: "在北京大学获得。", en: "Received at Peking University." },
     },
     {
       year: "2022",
       kind: { zh: "奖学金", en: "Scholarship" },
-      grade: { zh: "最高荣誉奖学金", en: "Highest honorary scholarship" },
+      grade: { zh: "校设最高", en: "Highest university honor" },
       title: { zh: "北京大学五四奖学金", en: "Peking University May Fourth Scholarship" },
       note: { zh: "校设年度最高荣誉奖学金。", en: "The university’s highest annual honorary scholarship." },
     },
     {
       year: "2025",
-      kind: { zh: "荣誉", en: "Honor" },
+      kind: { zh: "荣誉称号", en: "Honorific" },
       grade: { zh: "标兵", en: "Pacesetter" },
-      title: { zh: "北京大学三好学生标兵", en: "Peking University Three-Good Student Pacesetter" },
+      title: { zh: "北京大学三好学生标兵", en: "PKU Three-Good Student Pacesetter" },
       note: { zh: "校级三好学生标兵。", en: "University-level pacesetter award." },
-    },
-    {
-      year: "2025",
-      kind: { zh: "荣誉", en: "Honor" },
-      grade: { zh: "十佳", en: "Top ten" },
-      title: { zh: "北京大学十佳团支书", en: "Top Ten League Branch Secretaries, Peking University" },
-      note: { zh: "校级十佳。", en: "One of ten university-wide." },
     },
   ],
 };

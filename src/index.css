@@ -527,6 +527,14 @@ img { max-width: 100%; display: block; }
 .grant-list a {
   color: var(--accent);
 }
+.grant-list .honor-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.grant-list .honor-card:hover h3 {
+  color: var(--accent);
+}
 .honor-label {
   margin: 22px 0 0;
   font-family: "Outfit", "PingFang SC", "Microsoft YaHei", sans-serif;

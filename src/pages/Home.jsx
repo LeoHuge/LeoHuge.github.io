@@ -150,34 +150,44 @@ export default function Home() {
           <h2 id="honors-title">{t(ui.honorsTitle)}</h2>
           <span>{t(ui.honorsKicker)}</span>
         </header>
-        <h3 className="honor-label">{t(ui.researchHonors)}</h3>
-        <div className="grant-list">
-          {honors.research.map((item) => (
-            <article key={`${item.year}-${item.kind.zh}-${item.grade.zh}-${item.title.zh}`}>
-              <div className="grant-meta">
-                <span className="service-role">{t(item.kind)}</span>
-                <span className="closed-tag">{t(item.grade)}</span>
-                <time>{item.year}</time>
-              </div>
-              <h3>{t(item.title)}</h3>
-              <p>{t(item.note)}</p>
-            </article>
-          ))}
-        </div>
-        <h3 className="honor-label">{t(ui.personalHonors)}</h3>
-        <div className="grant-list">
-          {honors.personal.map((item) => (
-            <article key={`${item.year}-${item.kind.zh}-${item.grade.zh}-${item.title.zh}`}>
-              <div className="grant-meta">
-                <span className="service-role">{t(item.kind)}</span>
-                <span className="closed-tag">{t(item.grade)}</span>
-                <time>{item.year}</time>
-              </div>
-              <h3>{t(item.title)}</h3>
-              <p>{t(item.note)}</p>
-            </article>
-          ))}
-        </div>
+        {[
+          [ui.researchHonors, honors.research],
+          [ui.teachingHonors, honors.teaching],
+          [ui.practiceHonors, honors.practice],
+          [ui.personalHonors, honors.personal],
+        ].map(([label, items]) => (
+          <div key={label.en}>
+            <h3 className="honor-label">{t(label)}</h3>
+            <div className="grant-list">
+              {items.map((item) => {
+                const inner = (
+                  <>
+                    <div className="grant-meta">
+                      <span className="service-role">{t(item.kind)}</span>
+                      <span className="closed-tag">{t(item.grade)}</span>
+                      <time>{item.year}</time>
+                    </div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.note)}</p>
+                  </>
+                );
+                const key = `${item.year}-${item.kind.zh}-${item.grade.zh}-${item.title.zh}`;
+                if (item.href?.startsWith("/")) {
+                  return (
+                    <Link className="honor-card" to={item.href} key={key}>
+                      {inner}
+                    </Link>
+                  );
+                }
+                return (
+                  <article key={key}>
+                    {inner}
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </section>
 
       <section className="block" aria-labelledby="service-title">
