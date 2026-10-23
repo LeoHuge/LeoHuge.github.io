@@ -3,12 +3,12 @@
   The clinic at the gate — revision syntax
   BMC Health Services Research
 
-  PART A  Archived specification. A Stata 18 rebuild of the four CHARLS waves
-          returned 11,726 people and 46,904 person-years. The linear probability
-          coefficient rounded to the archived 0.034, and the outpatient-user
-          coefficient on primary care rounded to -1.421. The full-sample Tobit
-          coefficients did not match, so Tables 4 and 7 keep the archived cells.
-          Do not paste a fresh Tobit run over those tables.
+  PART A  Specifications behind Tables 4-7. A Stata 18 run on the balanced
+          panel (11,726 people, 46,904 person-years) is what those tables report.
+          The submitted full-sample Tobit cells are not used: this command
+          returns 12.772 (cluster SE 0.075) on primary care for outpatient
+          log expenditure, not the submitted 10.797. The outpatient direct
+          coefficient is -0.505 (cluster SE 0.147).
 
   PART B  Checks that were estimated on that rebuild and are reported in
           Table 8 of the revised manuscript. The joint outpatient-minus-inpatient
@@ -51,8 +51,7 @@ gen year_2018 = year == 2018
 global CTRL "age female edu hukou year_2013 year_2015 year_2018"
 
 *==============================================================================
-* PART A — archived specification (do not add new numbers to the paper
-*           until this run has been reconciled with Tables 4–7)
+* PART A — specifications reported in Tables 4-7
 *==============================================================================
 
 * A1. Primary-care linear probability and Probit AME, full sample
@@ -78,13 +77,67 @@ program define boot_ind_op, rclass
     scalar b = _b[primary_hosp]
     return scalar ind = a * b
 end
-* Archived tables keep the 300-replication interval. The 1,000-replication
-* percentile interval is the one reported beside it in the text and in Table 8.
+* Table 5 reports this 1,000-replication percentile interval.
 * xtset must be cleared first.
 xtset, clear
 bootstrap r(ind), reps(1000) seed(20261020) cluster(id_num) nodots ///
     saving("$res/boot_op.dta", replace): boot_ind_op
 estat bootstrap, percentile
+restore
+
+* A4. Inpatient and total Tobit, same controls
+tobit ln_cost_inpatient resident_ins $CTRL, ll(0) vce(cluster id_num)
+tobit ln_cost_inpatient resident_ins primary_hosp $CTRL, ll(0) vce(cluster id_num)
+tobit ln_cost_total resident_ins $CTRL, ll(0) vce(cluster id_num)
+tobit ln_cost_total resident_ins primary_hosp $CTRL, ll(0) vce(cluster id_num)
+
+* A5. Inpatient-user and either-service OLS
+preserve
+keep if inpatient == 1
+reg ln_cost_inpatient resident_ins $CTRL, vce(cluster id_num)
+reg primary_hosp resident_ins $CTRL, vce(cluster id_num)
+reg ln_cost_inpatient resident_ins primary_hosp $CTRL, vce(cluster id_num)
+restore
+preserve
+keep if outpatient == 1 | inpatient == 1
+reg ln_cost_total resident_ins $CTRL, vce(cluster id_num)
+reg primary_hosp resident_ins $CTRL, vce(cluster id_num)
+reg ln_cost_total resident_ins primary_hosp $CTRL, vce(cluster id_num)
+restore
+
+* A6. Table 6 contrasts
+preserve
+keep if sample_B == 1 & outpatient == 1
+reg ln_cost_outpatient resident_ins $CTRL, vce(cluster id_num)
+reg primary_hosp resident_ins $CTRL, vce(cluster id_num)
+reg ln_cost_outpatient resident_ins primary_hosp $CTRL, vce(cluster id_num)
+restore
+preserve
+keep if outpatient == 1
+reg ln_cost_outpatient resident_ins $CTRL health chronic_n, vce(cluster id_num)
+reg primary_hosp resident_ins $CTRL health chronic_n, vce(cluster id_num)
+reg ln_cost_outpatient resident_ins primary_hosp $CTRL health chronic_n, vce(cluster id_num)
+reg ln_cost_outpatient X_narrow $CTRL, vce(cluster id_num)
+reg primary_hosp X_narrow $CTRL, vce(cluster id_num)
+reg ln_cost_outpatient X_narrow primary_hosp $CTRL, vce(cluster id_num)
+restore
+preserve
+keep if inpatient == 1
+reg ln_cost_inpatient resident_ins $CTRL health chronic_n, vce(cluster id_num)
+reg primary_hosp resident_ins $CTRL health chronic_n, vce(cluster id_num)
+reg ln_cost_inpatient resident_ins primary_hosp $CTRL health chronic_n, vce(cluster id_num)
+restore
+
+* A7. User-sample Probit AME
+preserve
+keep if outpatient == 1
+probit primary_hosp resident_ins $CTRL, vce(cluster id_num)
+margins, dydx(resident_ins)
+restore
+preserve
+keep if inpatient == 1
+probit primary_hosp resident_ins $CTRL, vce(cluster id_num)
+margins, dydx(resident_ins)
 restore
 
 *==============================================================================
