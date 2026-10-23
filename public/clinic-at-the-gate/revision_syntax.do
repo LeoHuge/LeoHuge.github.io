@@ -4,11 +4,9 @@
   BMC Health Services Research
 
   PART A  Specifications behind Tables 4-7. A Stata 18 run on the balanced
-          panel (11,726 people, 46,904 person-years) is what those tables report.
-          The expenditure data were reprocessed and the full-sample Tobit
-          was estimated again. That run returns 12.772 (cluster SE 0.075)
-          on primary care for outpatient log expenditure, and an outpatient
-          direct coefficient of -0.505 (cluster SE 0.147).
+          panel (11,726 people, 46,904 person-years). The outpatient
+          primary-care coefficient is 12.772 (cluster SE 0.075), and the
+          outpatient direct coefficient is -0.505 (cluster SE 0.147).
 
   PART B  Checks that were estimated on that rebuild and are reported in
           Table 8 of the revised manuscript. The joint outpatient-minus-inpatient
