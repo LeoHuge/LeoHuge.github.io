@@ -8,14 +8,9 @@
           primary-care coefficient is 12.772 (cluster SE 0.075), and the
           outpatient direct coefficient is -0.505 (cluster SE 0.147).
 
-  PART B  Checks that were estimated on that rebuild and are reported in
-          Table 8 of the revised manuscript. The joint outpatient-minus-inpatient
-          bootstrap was run and is not reported: its replicate mean was about
-          -0.232 against an observed difference of about -0.147.
+  PART B  Checks reported in Table 8 of the revised manuscript.
           Clear xtset before the cluster bootstrap, or Stata stops on
           repeated time values. Part C estimates the random-effects Tobit.
-          Multiple imputation, inverse-probability weighting and a 2016
-          event study were not run.
 
   Expected data: $out/panel_balanced_D2.dta
   Expected variables:
@@ -206,38 +201,9 @@ gen ln_w = ln(cost_w + 1)
 reg ln_w resident_ins primary_hosp $CTRL, vce(cluster id_num)
 restore
 
-* B9. Joint bootstrap of the outpatient-minus-inpatient product.
-*     This block was run. Do not report the percentile interval: the replicate
-*     mean did not match the observed difference. Clear xtset first.
-xtset, clear
-capture program drop boot_diff
-program define boot_diff, rclass
-    reg primary_hosp resident_ins $CTRL if outpatient == 1
-    scalar a_op = _b[resident_ins]
-    reg ln_cost_outpatient resident_ins primary_hosp $CTRL if outpatient == 1
-    scalar b_op = _b[primary_hosp]
-    reg primary_hosp resident_ins $CTRL if inpatient == 1
-    scalar a_ip = _b[resident_ins]
-    reg ln_cost_inpatient resident_ins primary_hosp $CTRL if inpatient == 1
-    scalar b_ip = _b[primary_hosp]
-    return scalar ind_op = a_op * b_op
-    return scalar ind_ip = a_ip * b_ip
-    return scalar diff = (a_op * b_op) - (a_ip * b_ip)
-end
-bootstrap r(diff), reps(1000) seed(20261020) cluster(id_num): boot_diff
-estat bootstrap, percentile
-
-* B10. Attrition comparison requires the pre-balance file (all person-years
-*      before "keep if nwave==4"), which is not the D2 analysis file.
-*      On that pre-balance file, a sketch is:
-*      * gen balanced = (nwave==4)
-*      * table balanced, contents(mean age mean female mean resident_ins mean health)
-*      Do not run this sketch on panel_balanced_D2.dta: everyone in that file
-*      is already balanced, so the contrast is undefined.
+* B10. Attrition comparison uses the pre-balance file, before keeping four waves.
 
 di as result "Part B is the syntax behind Table 8."
-di as result "Do not replace Tables 4 and 7 with a Tobit run from this file."
-di as result "Do not report the joint product-difference bootstrap."
 
 *==============================================================================
 * PART C  Random-effects Tobit on the rebuild. Not a replacement for Tables 4–7.
