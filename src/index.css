@@ -301,7 +301,9 @@ img { max-width: 100%; display: block; }
 .news-card:hover h3,
 .paper:hover h3,
 .post-row:hover h2,
-.tool-links a:hover { color: var(--accent); }
+.tool-links a:hover,
+.theme-papers a:hover,
+.track-papers a:hover { color: var(--accent); }
 
 .theme-board {
   display: grid;
@@ -313,7 +315,7 @@ img { max-width: 100%; display: block; }
 .theme-board article {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 128px;
   padding: 16px 14px 18px;
   border-radius: 18px;
@@ -332,6 +334,38 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   line-height: 1.35;
   color: var(--ink);
+  margin-top: 18px;
+}
+
+.theme-papers,
+.track-papers {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.theme-papers li + li,
+.track-papers li + li {
+  margin-top: 6px;
+}
+
+.theme-papers a,
+.track-papers a {
+  display: block;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.track-papers a {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.theme-papers a:hover,
+.track-papers a:hover {
+  color: var(--accent);
 }
 
 .skill-list {
@@ -716,11 +750,12 @@ img { max-width: 100%; display: block; }
 
 .track-kicker {
   grid-column: 1;
-  grid-row: 1 / span 2;
+  grid-row: 1 / -1;
 }
 
 .track h3,
-.track p { grid-column: 2; }
+.track p,
+.track-papers { grid-column: 2; }
 
 .track h3 { margin: 0; font-size: 24px; }
 .track p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
@@ -857,6 +892,7 @@ img { max-width: 100%; display: block; }
   column-gap: 16px;
   padding: 20px 0;
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 80px;
 }
 
 .paper time {
@@ -1057,7 +1093,8 @@ img { max-width: 100%; display: block; }
   .paper time { grid-row: auto; }
   .track-kicker,
   .track h3,
-  .track p { grid-column: auto; grid-row: auto; }
+  .track p,
+  .track-papers { grid-column: auto; grid-row: auto; }
   .contact-panel h2 { font-size: 28px; }
   .contact-aside { align-items: flex-start; }
   .mail-link { white-space: normal; }

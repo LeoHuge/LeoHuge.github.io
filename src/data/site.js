@@ -740,6 +740,7 @@ export const research = {
         zh: "研究时间银行、邻里互助与社区照护中的时间如何被组织、记录和交换。",
         en: "Studies how time is organized, recorded, and exchanged in time banks, neighbourhood mutual aid, and community care.",
       },
+      paperIds: ["cdsd-2024-timebank", "cpn-2025-timesaving"],
     },
     {
       index: "02",
@@ -749,6 +750,12 @@ export const research = {
         zh: "研究中老年健康结局及其社会人口学风险，包括疾病、睡眠、死亡风险，以及童年期不利经历的远期影响。",
         en: "Examines later-life health outcomes and their sociodemographic risks, including illness, sleep, mortality, and the long-run effects of childhood adversity.",
       },
+      paperIds: [
+        "bs-2026-disability",
+        "healthcare-2025-mortality",
+        "isas-2025-fall",
+        "healthcare-2023-sleep",
+      ],
     },
     {
       index: "03",
@@ -758,6 +765,12 @@ export const research = {
         zh: "研究医疗保险、分级诊疗与中老年人的医疗经济负担。",
         en: "Studies medical insurance, hierarchical diagnosis and treatment, and the economic burden of care among middle-aged and older adults.",
       },
+      paperIds: [
+        "lnu-2026-burden",
+        "frontiers-2026-coverage",
+        "pmbda-2025-mental",
+        "chsm-2023-insurance",
+      ],
     },
   ],
   grantsTitle: { zh: "主持课题", en: "Projects led" },

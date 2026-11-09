@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { grants, honors, memberships, newsColumns, path, profile, service, ui } from "../data/site.js";
+import { grants, honors, memberships, newsColumns, path, profile, research, service, ui } from "../data/site.js";
 import { useI18n } from "../language.jsx";
+import TrackPapers from "../components/TrackPapers.jsx";
 import { Arrow } from "../components/Icons.jsx";
 
 export default function Home() {
   const { lang, t } = useI18n();
   const [newsIndex, setNewsIndex] = useState(0);
   const headline = profile.headline[lang];
-  const themes = profile.glance[lang];
   const newsColumn = newsColumns[newsIndex];
 
   return (
@@ -34,10 +34,11 @@ export default function Home() {
       </section>
 
       <section className="theme-board" aria-label={t(ui.glanceLabel)}>
-        {themes.map((item, index) => (
-          <article key={item}>
-            <span>0{index + 1}</span>
-            <strong>{item}</strong>
+        {research.tracks.map((track) => (
+          <article key={track.index}>
+            <span>{track.index}</span>
+            <strong>{t(track.title)}</strong>
+            <TrackPapers paperIds={track.paperIds} lang={lang} className="theme-papers" />
           </article>
         ))}
       </section>

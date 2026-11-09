@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { grants, paperTagCatalog, papers, profile, research, ui } from "../data/site.js";
 import { useI18n } from "../language.jsx";
 import PageIntro from "../components/PageIntro.jsx";
+import TrackPapers from "../components/TrackPapers.jsx";
 import { Arrow } from "../components/Icons.jsx";
 
 function paperTitles(paper, lang) {
@@ -17,7 +18,7 @@ function paperTitles(paper, lang) {
 function PaperCard({ paper, lang, t }) {
   const titles = paperTitles(paper, lang);
   return (
-    <article className="paper">
+    <article className="paper" id={`paper-${paper.id}`}>
       <time>{paper.year}</time>
       <h3>{titles.main}</h3>
       {titles.sub && titles.sub !== titles.main && (
@@ -107,6 +108,7 @@ export default function Research() {
             </div>
             <h3>{t(track.title)}</h3>
             <p>{t(track.text)}</p>
+            <TrackPapers paperIds={track.paperIds} lang={lang} />
           </article>
         ))}
       </div>
