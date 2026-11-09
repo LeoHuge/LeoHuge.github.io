@@ -115,6 +115,12 @@ export const newsColumns = [
     title: { zh: "论文成果", en: "Papers" },
     items: [
       {
+        date: "2026.09",
+        title: { zh: "从时间互助到有酬劳动：数字社会治理下银发经济发展路径的制度创新", en: "From Time Mutual Aid to Paid Labor: Institutional Innovation in the Development Path of the Silver Economy under Digital Social Governance" },
+        text: { zh: "陈功、许文虎，《北京社会科学》2026年第9期，CSSCI、北大核心、AMI，第二作者（学生第一作者）。", en: "Chen and Xu. Beijing Social Sciences, 2026(9). CSSCI, PKU Core, AMI. Second author (first student author)." },
+        href: "https://doi.org/10.13262/j.bjsshkxy.bjshkx.20260904",
+      },
+      {
         date: "2026",
         title: { zh: "分级诊疗的“负担悖论”及其破解", en: "The “Burden Paradox” of Hierarchical Diagnosis and Treatment and How to Address It" },
         text: { zh: "许文虎、由佳民、朱俊谕、陈功，《辽宁大学学报（哲学社会科学版）》，CSSCI、AMI，第一作者。", en: "Xu, You, Zhu, and Chen. Journal of Liaoning University. CSSCI, AMI. First author." },
@@ -752,7 +758,7 @@ export const research = {
         zh: "研究时间银行、邻里互助与社区照护中的时间如何被组织、记录和交换。",
         en: "Studies how time is organized, recorded, and exchanged in time banks, neighbourhood mutual aid, and community care.",
       },
-      paperIds: ["cdsd-2024-timebank", "cpn-2025-timesaving"],
+      paperIds: ["bjss-2026-paidlabor", "cdsd-2024-timebank", "cpn-2025-timesaving"],
     },
     {
       index: "02",
@@ -849,6 +855,33 @@ export const paperTagCatalog = {
 };
 
 export const papers = [
+  {
+    id: "bjss-2026-paidlabor",
+    year: 2026,
+    group: "cn",
+    index: { zh: "CSSCI / 北大核心 / AMI", en: "CSSCI / PKU Core / AMI" },
+    tags: ["cssci", "pku", "ami", "journal"],
+    pubLang: "zh",
+    type: { zh: "期刊论文", en: "Journal article" },
+    title: {
+      zh: "从时间互助到有酬劳动：数字社会治理下银发经济发展路径的制度创新",
+      en: "From Time Mutual Aid to Paid Labor: Institutional Innovation in the Development Path of the Silver Economy under Digital Social Governance",
+    },
+    authors: {
+      zh: "陈功, 许文虎",
+      en: "Gong Chen, Wenhu Xu",
+    },
+    venue: {
+      zh: "北京社会科学，CSSCI、北大核心、AMI",
+      en: "Beijing Social Sciences, CSSCI, PKU Core, AMI",
+    },
+    role: { zh: "第二作者（学生第一作者）", en: "Second author (first student author)" },
+    citation: {
+      zh: "陈功, 许文虎. 从时间互助到有酬劳动：数字社会治理下银发经济发展路径的制度创新[J]. 北京社会科学, 2026(9): 44-56. DOI: 10.13262/j.bjsshkxy.bjshkx.20260904.",
+      en: "Chen, G., & Xu, W. (2026). From time mutual aid to paid labor: Institutional innovation in the development path of the silver economy under digital social governance. Beijing Social Sciences, (9), 44–56. https://doi.org/10.13262/j.bjsshkxy.bjshkx.20260904",
+    },
+    href: "https://doi.org/10.13262/j.bjsshkxy.bjshkx.20260904",
+  },
   {
     id: "lnu-2026-burden",
     year: 2026,
