@@ -108,7 +108,7 @@ export default function Research() {
             </div>
             <h3>{t(track.title)}</h3>
             <p>{t(track.text)}</p>
-            <TrackPapers paperIds={track.paperIds} lang={lang} />
+            <TrackPapers paperIds={track.paperIds} lang={lang} showYear />
           </article>
         ))}
       </div>
