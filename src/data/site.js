@@ -20,12 +20,12 @@ export const profile = {
   vertical: "TIME · HEALTH · COST",
   concern: { zh: "博士研究生 · 人口学", en: "PhD student · Demography" },
   headline: {
-    zh: ["照料负担", "时间、健康与费用"],
-    en: ["Care burden", "Time, health, and cost"],
+    zh: ["照料需求", "时间、健康与费用"],
+    en: ["Care needs", "Time, health, and cost"],
   },
   lede: {
-    zh: "研究老龄社会中的照料负担，沿时间银行与互助照料、老龄健康、医疗负担三条展开。学科上属于人口学，交叉卫生经济与社会政策。",
-    en: "My research addresses care burden in later life, along three lines: time banks and mutual-aid care, later-life health, and medical burden. It sits in demography, with health economics and social policy.",
+    zh: "研究老龄社会中的照料需求，沿时间银行与互助照料、老龄健康、医疗负担三条展开。学科上属于人口学，交叉卫生经济与社会政策。",
+    en: "My research addresses care needs in later life, along three lines: time banks and mutual-aid care, later-life health, and medical burden. It sits in demography, with health economics and social policy.",
   },
   glance: {
     zh: ["时间银行与互助照料", "老龄健康", "医疗负担"],
@@ -721,8 +721,8 @@ export const memberships = [
 export const research = {
   kicker: { zh: "研究", en: "Research" },
   title: {
-    zh: "老龄社会中的照料负担",
-    en: "Care burden in an aging society",
+    zh: "老龄社会中的照料需求",
+    en: "Care needs in an aging society",
   },
   angle: { zh: "三个方向", en: "Three directions" },
   aside: {
