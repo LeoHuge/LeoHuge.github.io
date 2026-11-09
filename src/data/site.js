@@ -84,8 +84,8 @@ export const ui = {
   practiceHonors: { zh: "实践获奖", en: "Field awards" },
   personalHonors: { zh: "个人荣誉", en: "Personal honors" },
   grantClosed: { zh: "已结题", en: "Closed" },
-  serviceTitle: { zh: "学会与审稿", en: "Society and reviewing" },
-  serviceKicker: { zh: "目前", en: "Current" },
+  serviceTitle: { zh: "学会、审稿与编委", en: "Society, reviewing, and editorial work" },
+  serviceKicker: { zh: "学术任职", en: "Academic service" },
   current: { zh: "在读", en: "Now" },
   connect: { zh: "联系", en: "Contact" },
   connectTitle: {
@@ -698,11 +698,19 @@ export const service = [
     },
   },
   {
+    role: { zh: "编委", en: "Editorial board" },
+    title: { zh: "中国时间银行发展研究报告", en: "China Time Bank Development Report" },
+    text: {
+      zh: "华东理工大学出版社，2022。",
+      en: "East China University of Science and Technology Press, 2022.",
+    },
+  },
+  {
     role: { zh: "审稿", en: "Reviewing" },
     title: { zh: "SSCI 期刊匿名审稿", en: "Anonymous review for SSCI journals" },
     text: {
-      zh: "也是《中国时间银行发展研究报告》编委，华东理工大学出版社，2022。",
-      en: "Also an editorial board member of the China Time Bank Development Report, East China University of Science and Technology Press, 2022.",
+      zh: "为相关领域 SSCI 期刊担任匿名审稿。",
+      en: "Anonymous reviewer for SSCI journals in related fields.",
     },
   },
 ];
@@ -711,6 +719,10 @@ export const memberships = [
   {
     name: { zh: "中国老年学和老年医学学会", en: "CAGGS" },
     text: { zh: "志愿与公益分会", en: "Volunteerism and public welfare" },
+  },
+  {
+    name: { zh: "中国时间银行发展研究报告", en: "China Time Bank Development Report" },
+    text: { zh: "编委", en: "Editorial board" },
   },
   {
     name: { zh: "SSCI", en: "SSCI" },

@@ -598,7 +598,7 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--line);
 }
 
-.service-grid h3 { margin: 8px 0; font-size: 22px; }
+.service-grid h3 { margin: 8px 0; font-size: 20px; line-height: 1.35; }
 .service-grid p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
 
 .memberships {
@@ -1098,7 +1098,8 @@ img { max-width: 100%; display: block; }
   .contact-panel h2 { font-size: 28px; }
   .contact-aside { align-items: flex-start; }
   .mail-link { white-space: normal; }
-  .theme-board { grid-template-columns: 1fr; }
+  .theme-board,
+  .service-grid { grid-template-columns: 1fr; }
   .news-card { grid-template-columns: 1fr; gap: 4px; }
   .theme-board article { min-height: 96px; }
 }
