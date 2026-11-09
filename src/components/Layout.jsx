@@ -22,7 +22,10 @@ export default function Layout() {
     const page = location.pathname.startsWith("/blog/")
       ? ui.pages.blog
       : titles[location.pathname] || ui.pages.home;
-    const name = lang === "zh" ? `${profile.name.zh} ${profile.name.en}` : profile.name.en;
+    const name =
+      lang === "zh"
+        ? `${profile.name.zh} ${profile.nameLatin}`
+        : `${profile.name.en} ${profile.name.zh}`;
     document.title = `${name} | ${page[lang]}`;
 
     if (location.hash) {
@@ -65,10 +68,13 @@ export default function Layout() {
           {lang === "zh" ? (
             <>
               {profile.name.zh}
-              <span className="spine-name-en">{profile.name.en}</span>
+              <span className="spine-name-en">{profile.nameLatin}</span>
             </>
           ) : (
-            profile.name.en
+            <>
+              {profile.name.en}
+              <span className="spine-name-en">{profile.name.zh}</span>
+            </>
           )}
         </p>
         <p className="spine-role">{t(profile.role)}</p>
@@ -105,7 +111,7 @@ export default function Layout() {
       <div className="sheet">
         <header className="mobile-bar">
           <Link to="/" className="mobile-name">
-            {lang === "zh" ? profile.name.zh : profile.name.en}
+            {lang === "zh" ? profile.name.zh : `${profile.name.en} ${profile.name.zh}`}
           </Link>
           <button
             className="language-button light"
@@ -130,7 +136,7 @@ export default function Layout() {
           <Outlet />
         </main>
         <footer className="colophon">
-          <span>{profile.name.en}</span>
+          <span>{lang === "zh" ? `${profile.name.zh} ${profile.nameLatin}` : `${profile.name.en} ${profile.name.zh}`}</span>
           <span>{t(profile.footerNote)}</span>
           <span>© {new Date().getFullYear()}</span>
         </footer>

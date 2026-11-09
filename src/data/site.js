@@ -4,7 +4,8 @@
 
 export const profile = {
   monogram: "WX",
-  name: { zh: "许文虎", en: "Huxley Xu" },
+  name: { zh: "许文虎", en: "Wenhu Xu" },
+  nameLatin: "Huxley Xu",
   role: { zh: "博士研究生 · 人口学", en: "PhD Student · Demography" },
   org: { zh: "北京大学人口研究所", en: "Institute of Population Research, Peking University" },
   field: { zh: "时间银行与互助照料 · 老龄健康 · 医疗负担", en: "Time banks and mutual-aid care · Later-life health · Medical burden" },
@@ -15,7 +16,7 @@ export const profile = {
   github: "https://github.com/LeoHuge",
   site: "https://leohuge.github.io/",
   portrait: "/portrait.jpg",
-  portraitMark: { zh: "许文虎", en: "Huxley Xu" },
+  portraitMark: { zh: "许文虎", en: "Wenhu Xu" },
   vertical: "TIME · HEALTH · COST",
   concern: { zh: "博士研究生 · 人口学", en: "PhD student · Demography" },
   headline: {
@@ -136,6 +137,12 @@ export const newsColumns = [
         title: { zh: "中国中老年人全因死亡的社会人口学与健康相关风险因素", en: "A Cohort of Sociodemographic and Health-Related Risk Factors for All-Cause Mortality in Middle-Aged and Older Adults in China" },
         text: { zh: "Wenhu Xu、Hang Zhu、Yutian Chen、Qianyi Zhang、Zhinan Liu、Gong Chen，Healthcare，2025，13(17): 2104，第一作者。", en: "Xu, Zhu, Chen, Zhang, Liu, and Chen. Healthcare, 2025, 13(17), 2104. First author." },
         href: "/research",
+      },
+      {
+        date: "2025.03",
+        title: { zh: "时间之流的力量：东营时间银行作为社会治理创新与养老服务的桥梁", en: "The Power of Time Flow: Dongying’s Time Banking as a Bridge between Social Governance Innovation and Elderly Care" },
+        text: { zh: "Qianyi Zhang、Wenhu Xu、Yimeng Peng、Gong Chen，CDSD 2024 会议论文，第二作者。", en: "Zhang, Xu, Peng, and Chen. CDSD 2024 proceedings. Second author." },
+        href: "https://doi.org/10.2991/978-2-38476-380-1_50",
       },
       {
         date: "2025.01",
@@ -793,8 +800,8 @@ export const research = {
     zh: "其他会议",
     en: "Other conference papers",
     note: {
-      zh: "IJCAI 工作坊论文。",
-      en: "An IJCAI workshop paper.",
+      zh: "未列入上述索引的会议论文。",
+      en: "Conference papers not listed in the groups above.",
     },
   },
 };
@@ -1248,6 +1255,33 @@ export const papers = [
       en: "Chen, G., Xu, W., & Chen, Y. (2025, August 13). AI-driven innovation in “time savings” for volunteer elder care. China Population News.",
     },
     href: "https://jkb.com.cn/rkb/lilun/2025/0813/504991.html",
+  },
+  {
+    id: "cdsd-2024-timebank",
+    year: 2025,
+    group: "other",
+    index: { zh: "国际会议", en: "International conference" },
+    tags: ["conference"],
+    pubLang: "en",
+    type: { zh: "会议论文", en: "Conference paper" },
+    title: {
+      zh: "时间之流的力量：东营时间银行作为社会治理创新与养老服务的桥梁",
+      en: "The Power of Time Flow: Dongying’s Time Banking as a Bridge between Social Governance Innovation and Elderly Care",
+    },
+    authors: {
+      zh: "Qianyi Zhang, Wenhu Xu, Yimeng Peng, Gong Chen",
+      en: "Qianyi Zhang, Wenhu Xu, Yimeng Peng, Gong Chen",
+    },
+    venue: {
+      zh: "CDSD 2024，Atlantis Press",
+      en: "CDSD 2024, Atlantis Press",
+    },
+    role: { zh: "第二作者；通讯作者 Gong Chen", en: "Second author; corresponding author Gong Chen" },
+    citation: {
+      zh: "Zhang Q, Xu W, Peng Y, Chen G. The Power of Time Flow: Dongying’s Time Banking as a Bridge between Social Governance Innovation and Elderly Care[C]//Proceedings of the 4th International Conference on Culture, Design and Social Development (CDSD 2024). Dordrecht: Atlantis Press, 2025: 450-455. DOI: 10.2991/978-2-38476-380-1_50.",
+      en: "Zhang, Q., Xu, W., Peng, Y., & Chen, G. (2025). The power of time flow: Dongying’s time banking as a bridge between social governance innovation and elderly care. In Proceedings of the 4th International Conference on Culture, Design and Social Development (CDSD 2024) (pp. 450–455). Atlantis Press. https://doi.org/10.2991/978-2-38476-380-1_50",
+    },
+    href: "https://doi.org/10.2991/978-2-38476-380-1_50",
   },
   {
     id: "ijcai-2022-aidbei",
