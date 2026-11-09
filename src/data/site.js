@@ -197,7 +197,7 @@ export const newsColumns = [
           zh: "7月13日至16日再去武汉，补服务接受者这一侧。百步亭、塔子湖街道、金桥社区社会工作服务站、劳动街道惠中社区。",
           en: "Returned to Wuhan from 13 to 16 July to add people who receive services. Baibuting, Tazihu subdistrict, the Jinqiao community social-work station, and Huizhong community on Laodong subdistrict.",
         },
-        href: "",
+        href: "/blog/wuhan-round-4",
       },
       {
         date: "2026.06",
@@ -206,7 +206,7 @@ export const newsColumns = [
           zh: "6月15日至7月13日再去长沙，把样本做大。华月湖、云溪湾、仰天湖、碧沙湖、滨汇，以及新绿、坤元两家社工机构。",
           en: "Returned to Changsha from 15 June to 13 July and enlarged the sample. Huayuehu, Yunxiwan, Yangtianhu, Bishahu, Binhui, and the Xinlü and Kunyuan social-work agencies.",
         },
-        href: "",
+        href: "/blog/changsha-round-3",
       },
       {
         date: "2026.01",
@@ -215,7 +215,7 @@ export const newsColumns = [
           zh: "1月12日至19日，人口所与武汉理工大学在春和、百步亭做访谈和问卷。我负责行前培训，讲问卷、访谈和录音编码，并把长沙第一次碰到的情况带进去。",
           en: "From 12 to 19 January, with Wuhan University of Technology, at Chunhe and Baibuting. I ran the briefing on questionnaires, interviews, and recording codes, and brought in what the first Changsha round had shown.",
         },
-        href: "",
+        href: "/blog/wuhan-round-2",
       },
       {
         date: "2026.01",
@@ -224,7 +224,7 @@ export const newsColumns = [
           zh: "1月12日至19日。兑换一年里没几次，人还在继续做志愿。",
           en: "12 to 19 January. Redemption is rare, and people still keep volunteering.",
         },
-        href: "",
+        href: "/blog/changsha-round-1",
       },
       {
         date: "2025.01",
@@ -1314,61 +1314,67 @@ export const papers = [
 
 export const toolsPage = {
   kicker: { zh: "工具", en: "Tools" },
-  title: { zh: "研究工具", en: "Research tools" },
+  title: { zh: "调研工具", en: "Fieldwork tools" },
   aside: {
-    zh: "调研记录表与课程阅读清单。",
-    en: "A fieldwork log and a course reading list.",
+    zh: "长沙、武汉四次时间银行调研里实际用过的问卷和访谈办法。",
+    en: "The questionnaires and interview procedures used in four time-bank rounds in Changsha and Wuhan.",
   },
 };
 
 export const tools = [
   {
     index: "01",
-    category: { zh: "实地记录", en: "Field notes" },
-    name: "Fieldnote",
-    version: { zh: "访谈记录", en: "Interview notes" },
-    stack: "Spreadsheet · Markdown",
+    category: { zh: "问卷", en: "Questionnaires" },
+    name: { zh: "三类问卷", en: "Three questionnaires" },
+    version: { zh: "组织运营者 · 服务提供者 · 服务接受者", en: "Operators, providers, and recipients" },
+    stack: "Tablet · Spreadsheet",
     summary: {
-      zh: "用于记录访谈日期、地点、原话与后续推断，便于当晚整理。",
-      en: "Records interview date, place, quoted speech, and later inferences for same-day write-up.",
+      zh: "四次都按角色分卷，不合成一张总表。运营者问站点怎么派人、怎么记账；提供者问为什么继续做、积分是否相符；接受者问服务有没有对上、账能不能查。同一组问题在长沙和武汉各做了两轮。",
+      en: "All four rounds used separate forms by role, not one combined sheet. Operators were asked how the site assigns people and keeps records; providers why they continue and whether credits match the work; recipients whether the service fit and whether the account can be checked. The same items were used twice in Changsha and twice in Wuhan.",
     },
-    links: [],
+    links: [
+      { label: { zh: "调研备忘", en: "Field notes" }, href: "/blog" },
+    ],
     features: [
       {
-        label: { zh: "分开存放", en: "Kept apart" },
-        text: { zh: "原话、场景和推断各占一列。", en: "Quoted speech, setting, and inference each have a column." },
+        label: { zh: "按角色分开", en: "By role" },
+        text: { zh: "提供者和接受者回答的不是同一件事，所以不并成一个满意度总分。", en: "Providers and recipients are not answering the same questions, so the forms are not collapsed into one satisfaction score." },
       },
       {
-        label: { zh: "当晚核对", en: "Same-day check" },
-        text: { zh: "留一列给当天补问和改写。", en: "A column for questions you still need to ask that day." },
+        label: { zh: "平板面访", en: "Tablet interviews" },
+        text: { zh: "现场用平板填。听力、方言或题意不清楚时，访员读题、代填。", en: "Completed on a tablet in the field. If hearing, dialect, or wording gets in the way, the interviewer reads the item and fills it in." },
       },
       {
-        label: { zh: "可以导出", en: "Exportable" },
-        text: { zh: "表格可以导出成 Markdown，直接贴进报告。", en: "Export the sheet to Markdown and paste it into a report." },
+        label: { zh: "四轮对照", en: "Four rounds" },
+        text: { zh: "继续参与、积分是否相符、记录能不能核对，四次尽量问同一组问题。", en: "Continued participation, whether credits match the work, and whether records can be checked were asked in the same way across rounds." },
       },
     ],
   },
   {
     index: "02",
-    category: { zh: "课程材料", en: "Teaching" },
-    name: "Reading list",
-    version: { zh: "按周排列", en: "Week by week" },
-    stack: "Static page",
+    category: { zh: "访谈", en: "Interviews" },
+    name: { zh: "访谈与录音编码", en: "Interviews and audio coding" },
+    version: { zh: "当晚整理", en: "Written up the same day" },
+    stack: "Audio · Text",
     summary: {
-      zh: "按周排的阅读清单。每篇写一句为什么读，以及先看哪一段。",
-      en: "A week-by-week reading list. Each item says why it is assigned and which passage to read first.",
+      zh: "问卷之后补访谈。第一次长沙看兑换少为什么人还在做；第二次武汉看存折、台账和线上记录怎么并用；第三次长沙看队伍大了以后计分能不能说清任务差别；第四次武汉补问服务接受者这一侧。",
+      en: "Interviews follow the questionnaires. Round 1 in Changsha asked why people keep volunteering when redemption is rare; round 2 in Wuhan how passbooks, ledgers, and online records are used together; round 3 in Changsha whether credits can still explain different tasks after the sample grew; round 4 in Wuhan added people who receive services.",
     },
     links: [
-      { label: { zh: "教学页", en: "Teaching" }, href: "/teaching" },
+      { label: { zh: "调研备忘", en: "Field notes" }, href: "/blog" },
     ],
     features: [
       {
-        label: { zh: "按周", en: "By week" },
-        text: { zh: "一周一组，不把整学期的文献堆在一起。", en: "One group per week, instead of one long list." },
+        label: { zh: "原话和判断分开", en: "Speech kept apart" },
+        text: { zh: "当天把原话、现场情况和事后推断分成三栏，避免隔天混在一起。", en: "Quoted speech, the setting, and later inferences go in separate columns the same day, so they are not mixed later." },
       },
       {
-        label: { zh: "读法", en: "How to read" },
-        text: { zh: "每篇有一句阅读提示。", en: "Each reading has a one-line prompt." },
+        label: { zh: "录音编码", en: "Audio coding" },
+        text: { zh: "按需求怎么进来、谁在记账、兑换怎么发生、有没有人退出编码。", en: "Coded for how requests come in, who keeps the record, how redemption happens, and whether anyone has left." },
+      },
+      {
+        label: { zh: "编号匿名", en: "Anonymised" },
+        text: { zh: "材料用编号，不写姓名。", en: "Materials use codes, not names." },
       },
     ],
   },
@@ -1444,55 +1450,107 @@ export const courses = [
 
 export const blogPage = {
   kicker: { zh: "博客", en: "Blog" },
-  title: { zh: "笔记与短文", en: "Notes and short essays" },
+  title: { zh: "调研备忘", en: "Field notes" },
   aside: {
-    zh: "读书笔记与调研备忘，不定期更新。",
-    en: "Reading notes and fieldwork memos, updated from time to time.",
+    zh: "长沙两次、武汉两次，按时间写下四次时间银行调研里看到的情况。",
+    en: "Four time-bank rounds, twice in Changsha and twice in Wuhan, written up in order.",
   },
 };
 
 export const posts = [
   {
-    slug: "before-the-visit",
-    date: "2026.03.18",
-    tag: { zh: "调研", en: "Fieldwork" },
-    title: { zh: "进社区之前", en: "Before the visit" },
+    slug: "wuhan-round-4",
+    date: "2026.07.16",
+    tag: { zh: "第四次 · 武汉", en: "Round 4 · Wuhan" },
+    title: { zh: "补问服务接受者", en: "Adding people who receive services" },
     excerpt: {
-      zh: "约访、进门和当晚的记录，往往比提纲更决定这次能不能谈下去。",
-      en: "The appointment, the doorway, and that evening's notes usually decide more than the guide.",
+      zh: "7月13日至16日再去武汉。百步亭、塔子湖街道、金桥社区社会工作服务站、劳动街道惠中社区。事情办成了，和账记得清，不是同一问。",
+      en: "Back in Wuhan, 13–16 July. Baibuting, Tazihu, the Jinqiao social-work station, and Huizhong on Laodong subdistrict. Getting the job done and being able to see the account are not the same question.",
     },
     body: [
       {
-        zh: "去之前把时间、地点和要找的人核对一遍。漏一项，往往不是到了现场才发现，而是约的时候就已经不稳。",
-        en: "Check the time, the place, and the person before you leave. A missing piece usually fails at the scheduling, not at the door.",
+        zh: "7月13日至16日再去武汉，地点在百步亭、塔子湖街道、金桥社区社会工作服务站，以及劳动街道惠中社区。第二次已经看过组织怎么派人和存折怎么记。这一轮把问卷和访谈更多留给服务接受者。",
+        en: "We returned to Wuhan from 13 to 16 July, at Baibuting, Tazihu subdistrict, the Jinqiao community social-work station, and Huizhong community on Laodong subdistrict. Round 2 had already covered how work is assigned and how passbooks are kept. This round gave more of the questionnaires and interviews to people who receive services.",
       },
       {
-        zh: "进门以后，问题宜短。谁来过、事情记在哪里、老人知不知道找谁，往往比一套完整的理论用语更容易接上。",
-        en: "Once inside, keep the questions short. Who came, where it was written down, and whether the older person knows whom to call will usually open the conversation sooner than a theoretical phrase.",
+        zh: "探访、代办比较容易排上；陪诊和长期照料要看人手，也要看出了事谁负责。纸质登记、工作人员代办和线上打卡仍在一起用。会用手机的人自己能查，不会用的人还是靠人工记上一笔。",
+        en: "Visits and errands are easier to roster. Accompanying someone to a clinic, or longer care, depends on who is available and who takes responsibility if something goes wrong. Paper records, staff filling in for someone, and online check-ins are still used together. People who use a phone can look up their own record; others still need someone to write it down.",
       },
       {
-        zh: "当晚把原话和自己的推测分开。过两天再看，印象会自己补全，补上去的那部分不一定发生过。",
-        en: "That evening, separate what was said from what you inferred. Two days later, memory fills gaps, and the filled part may not have happened.",
+        zh: "接受者清楚谁来帮过自己，却不一定知道服务怎么确认、积分记到哪里、以后能不能用。服务对上了，不等于账户这边也看清楚了。第二次武汉看到的组织链在这一轮还能对上。接受者这一端能不能查到账，是这一轮才补上的。",
+        en: "Recipients often know who came to help, and still may not know how the visit was confirmed, where the credits went, or whether they can be used later. A service that fit is not the same as an account that can be checked. The organising chain from round 2 still showed up; what was missing was whether recipients can see the record.",
       },
     ],
   },
   {
-    slug: "reading-an-hour",
-    date: "2025.11.02",
-    tag: { zh: "读书", en: "Reading" },
-    title: { zh: "先问白天谁在", en: "Ask first who is there in the daytime" },
+    slug: "changsha-round-3",
+    date: "2026.07.13",
+    tag: { zh: "第三次 · 长沙", en: "Round 3 · Changsha" },
+    title: { zh: "队伍大了以后", en: "After the teams grew" },
     excerpt: {
-      zh: "进社区之前，提纲上的词往往还太满。先把白天谁在问清楚。",
-      en: "Before a community visit, the words on the guide are usually too full. Ask first who is there in the daytime.",
+      zh: "6月15日至7月13日再去长沙，把样本做大。华月湖、云溪湾、仰天湖、碧沙湖、滨汇，以及新绿、坤元两家社工机构。计分能不能说清任务差别，成了这一轮要问的事。",
+      en: "Back in Changsha, 15 June to 13 July, with a larger sample. Huayuehu, Yunxiwan, Yangtianhu, Bishahu, Binhui, and the Xinlü and Kunyuan social-work agencies. This round asked whether credits can still explain different kinds of work.",
     },
     body: [
       {
-        zh: "去之前我容易先想好一套说法，互助、时间银行、政策试点。到了办公室，对方接不上。后来改成白天谁来、待多久、老人自己能做哪些事。谈话就具体一些。",
-        en: "Before I go, I tend to arrive with a set of terms: mutual aid, time banks, policy pilots. In the office, people cannot pick them up. It goes better if I ask who comes during the day, how long they stay, and what the older person can still do.",
+        zh: "6月15日至7月13日再去长沙。北京大学人口研究所牵头，湖南女子学院、湘潭大学一起做。走访华月湖、云溪湾、仰天湖、碧沙湖、滨汇五个社区，以及新绿、坤元两家社工机构。第一次样本小，接受者尤其少，这一轮把两边都补上。",
+        en: "We returned to Changsha from 15 June to 13 July. The Institute of Population Research at Peking University led the work, with Hunan Women’s University and Xiangtan University. The sites were Huayuehu, Yunxiwan, Yangtianhu, Bishahu, and Binhui, plus two social-work agencies, Xinlü and Kunyuan. Round 1 had been small, especially on the recipient side; this round added both.",
       },
       {
-        zh: "时间利用的问题和互助养老的问题，不必在同一次谈话里问完。有的社区根本不记账。没有账，不表示没有人来。",
-        en: "Questions about time use and questions about mutual aid do not have to be finished in the same conversation. Some neighborhoods keep no ledger. No ledger does not mean nobody came.",
+        zh: "社区仍然靠网格和熟人把人叫来，活动也还能排上。新的问题在计分。陪诊有路途、等候和意外；入户要进别人家里；一般活动按次数好算。统一记一小时，站点之间的说法并不一样，有的靠负责人临时加分或发礼品补上。",
+        en: "Neighbourhood grids and people who already know one another still bring volunteers in, and activities can still be rostered. The new problem is scoring. A clinic trip includes travel, waiting, and the chance of an accident; a home visit means entering someone’s house; ordinary activities are easier to count. Sites do not explain one recorded hour in the same way, and some make up the difference with extra points or a gift from whoever is in charge that day.",
+      },
+      {
+        zh: "熟人结对派得快，不在群里、不公开求助的人可能进不来。愿意继续做的结构还在，但计分、复查和风险要单独说清楚，不能只靠把队伍再扩一轮。",
+        en: "Pairing people who already know one another is fast. People who are not in the chat group, or who will not ask for help in public, may never enter the network. People still stay; scoring, review, and risk have to be stated on their own, and cannot be left to another round of recruitment.",
+      },
+    ],
+  },
+  {
+    slug: "wuhan-round-2",
+    date: "2026.01.19",
+    tag: { zh: "第二次 · 武汉", en: "Round 2 · Wuhan" },
+    title: { zh: "存折拿在手里", en: "A passbook in the hand" },
+    excerpt: {
+      zh: "1月12日至19日在春和、百步亭，与武汉理工大学一起做。纸质存折、人工台账和线上记录一起用。行前把长沙已经碰到的情况带进培训。",
+      en: "12–19 January at Chunhe and Baibuting, with Wuhan University of Technology. Paper passbooks, staff ledgers, and online records are used together. The Changsha round was built into the briefing.",
+    },
+    body: [
+      {
+        zh: "第二次和长沙第一次赶在同一周，1月12日至19日，地点在武汉春和社区和百步亭。人口所与武汉理工大学一起做。行前培训讲三类问卷、访谈和录音编码，也把长沙已经碰到的情况说进去：兑换不多，人还在做，进门以后不要先从账户讲起。",
+        en: "Round 2 ran in the same week as the first Changsha round, 12–19 January, at Chunhe and Baibuting in Wuhan, with Wuhan University of Technology. The briefing covered the three questionnaires, interviews, and audio coding, and what Changsha had already shown: redemption is uncommon, people still keep volunteering, and the conversation should not start with the account.",
+      },
+      {
+        zh: "武汉这边，受访者经常先拿出存折。服务日期一笔一笔记着，兑换时再划掉。纸质存折方便老人自己看，人工台账用来补记和改错，线上平台用来汇总。三种记法同时在用。漏记的不只是分，也包括这件事有没有被认下来。",
+        en: "In Wuhan, people often brought out a passbook first. Service dates are written in, and credits are struck out when they are redeemed. The paper book is easy for an older person to see; the staff ledger is used to add and correct entries; the online platform is used to add them up. All three are in use at once. A missed entry is not only missing points; it is also work that was never acknowledged.",
+      },
+      {
+        zh: "兑换并不频繁。公开表扬和社区承认还在维持参与。这一轮要看的是：账户在很少兑的时候，靠什么还能被信任。谁有权改记录、改错找谁，比账户上的数字更先要问清。",
+        en: "Redemption is not frequent. Public thanks and recognition from the neighbourhood still keep people coming. This round asked what makes the account trusted when it is rarely cashed in. Who may change a record, and whom to see when it is wrong, had to be asked before the balance on the page.",
+      },
+    ],
+  },
+  {
+    slug: "changsha-round-1",
+    date: "2026.01.12",
+    tag: { zh: "第一次 · 长沙", en: "Round 1 · Changsha" },
+    title: { zh: "兑换少，人还在做", en: "Little redemption, people still stay" },
+    excerpt: {
+      zh: "1月12日至19日。积分一年难得兑几次，志愿还在转。问卷从这一轮起就分成运营者、提供者、接受者三份。",
+      en: "12–19 January. Credits are rarely redeemed in a given year, and volunteering continues. From this round the questionnaires were split into operators, providers, and recipients.",
+    },
+    body: [
+      {
+        zh: "第一次去长沙，是2026年1月12日至19日。社区已经挂着时间银行的名字，现场更常听到的是志愿服务、积分、帮邻里做事。磨刀、理发、拿药、上门走访，多半先由网格汇总，再按需要的人数找人。",
+        en: "The first Changsha round ran from 12 to 19 January 2026. The sites already used the name time bank; what people said more often was volunteering, credits, and helping a neighbour. Knife sharpening, haircuts, collecting medicine, and home visits were usually gathered by the grid first, then staffed by the number of people needed.",
+      },
+      {
+        zh: "积分是服务做完以后才登记。有的站点能兑水果、电风扇，有的当时还没有兑换安排。继续做的人不少，积分规则很少被说成去留的理由。账户要等到事情发生才有内容，现场的起点是谁来召集，不是先开户。",
+        en: "Credits were recorded after the work was done. Some sites could redeem fruit or a fan; some had no redemption arrangement yet. Plenty of people kept coming. Credit rules were rarely given as the reason for staying or leaving. The account only has something to show once the work has happened; on site the starting point is who calls people in, not who opens an account.",
+      },
+      {
+        zh: "这一轮把问卷拆成组织运营者、服务提供者、服务接受者三份，后面三次沿用。第一次接受者问得很少，所以后来还要回长沙扩样，并在武汉补需求这一侧。三类问卷和访谈编码写在工具页。",
+        en: "From this round the questionnaires were split into operators, providers, and recipients, and the later rounds kept that split. Recipients were few in round 1, which is why we went back to Changsha to enlarge the sample and added the demand side in Wuhan. The three forms and the interview coding are on the tools page.",
       },
     ],
   },

@@ -12,12 +12,12 @@ export default function Tools() {
       <PageIntro kicker={t(toolsPage.kicker)} title={t(toolsPage.title)} aside={t(toolsPage.aside)} />
       <div>
         {tools.map((tool) => (
-          <article className="tool" key={tool.name}>
+          <article className="tool" key={tool.index}>
             <div>
               <p className="tool-index">
                 {tool.index} — {t(tool.category)}
               </p>
-              <h2>{tool.name}</h2>
+              <h2>{t(tool.name)}</h2>
               <p className="tool-meta">{t(tool.version)}</p>
               <p className="tool-meta">{tool.stack}</p>
               <p className="tool-summary">{t(tool.summary)}</p>
