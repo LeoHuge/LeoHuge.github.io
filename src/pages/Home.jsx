@@ -217,7 +217,7 @@ export default function Home() {
 
       <section className="contact-panel" id="contact">
         <div>
-          <p className="mark light">{t(ui.connect)}</p>
+          <p className="mark">{t(ui.connect)}</p>
           <h2>
             {ui.connectTitle[lang][0]}
             <br />
